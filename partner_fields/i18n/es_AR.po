@@ -1,0 +1,439 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* partner_fields
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-07 21:57+0000\n"
+"PO-Revision-Date: 2022-04-07 21:57+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: partner_fields
+#: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__grease_qty__0-200
+#: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__hidraulic_oil_qty__0-200
+#: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__motor_oil_qty__0-200
+#: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__transmission_oil_qty__0-200
+#: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__urea_qty__0-200
+msgid "0-200"
+msgstr ""
+
+#. module: partner_fields
+#: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__grease_qty__1_000-1_500
+#: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__hidraulic_oil_qty__1_000-1_500
+#: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__motor_oil_qty__1_000-1_500
+#: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__transmission_oil_qty__1_000-1_500
+#: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__urea_qty__1_000-1_500
+msgid "1.000-1.500"
+msgstr ""
+
+#. module: partner_fields
+#: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__grade_2_diesel__1000-5000
+#: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__grade_3_diesel__1000-5000
+msgid "1000-5000"
+msgstr ""
+
+#. module: partner_fields
+#: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__grade_2_diesel__10000-15000
+#: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__grade_3_diesel__10000-15000
+msgid "10000-15000"
+msgstr ""
+
+#. module: partner_fields
+#: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__grease_qty__200-600
+#: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__hidraulic_oil_qty__200-600
+#: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__motor_oil_qty__200-600
+#: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__transmission_oil_qty__200-600
+#: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__urea_qty__200-600
+msgid "200-600"
+msgstr ""
+
+#. module: partner_fields
+#: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__grade_2_diesel__5000-10000
+#: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__grade_3_diesel__5000-10000
+msgid "5000-10000"
+msgstr ""
+
+#. module: partner_fields
+#: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__grease_qty__600-1000
+#: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__hidraulic_oil_qty__600-1000
+#: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__motor_oil_qty__600-1000
+#: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__transmission_oil_qty__600-1000
+#: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__urea_qty__600-1000
+msgid "600-1.000"
+msgstr ""
+
+#. module: partner_fields
+#: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__main_activity__agro_contractor
+msgid "Agricultural Contractor"
+msgstr "Contratista agropecuario"
+
+#. module: partner_fields
+#: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__main_activity__agro_producer
+msgid "Agricultural Producer"
+msgstr "Productor agropecuario"
+
+#. module: partner_fields
+#: model_terms:ir.ui.view,arch_db:partner_fields.GLB_fields
+msgid "Agro"
+msgstr "Agro"
+
+#. module: partner_fields
+#: model_terms:ir.ui.view,arch_db:partner_fields.GLB_fields
+msgid "Annual Consumption"
+msgstr "Consumo anual"
+
+#. module: partner_fields
+#: model:ir.model.fields,field_description:partner_fields.field_res_partner__average_mileage
+#: model:ir.model.fields,field_description:partner_fields.field_res_users__average_mileage
+msgid "Average Mileage"
+msgstr "Kilometraje promedio"
+
+#. module: partner_fields
+#: model_terms:ir.ui.view,arch_db:partner_fields.GLB_fields
+msgid "Brands"
+msgstr "Marcas"
+
+#. module: partner_fields
+#: model:ir.model.fields,field_description:partner_fields.field_res_partner__brands_and_models
+#: model:ir.model.fields,field_description:partner_fields.field_res_users__brands_and_models
+msgid "Brands and Models"
+msgstr "Marcas y modelos"
+
+#. module: partner_fields
+#: model:ir.model.fields,field_description:partner_fields.field_res_partner__castrol_oil
+#: model:ir.model.fields,field_description:partner_fields.field_res_users__castrol_oil
+msgid "Castrol Oil"
+msgstr "Castrol"
+
+#. module: partner_fields
+#: model_terms:ir.ui.view,arch_db:partner_fields.GLB_fields
+msgid "Consumption"
+msgstr "Consumo"
+
+#. module: partner_fields
+#: model:ir.model,name:partner_fields.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: partner_fields
+#: model_terms:ir.ui.view,arch_db:partner_fields.GLB_fields
+msgid "Crops"
+msgstr "Cultivos"
+
+#. module: partner_fields
+#: model:ir.model.fields,field_description:partner_fields.field_res_partner__cubic_capacity
+#: model:ir.model.fields,field_description:partner_fields.field_res_users__cubic_capacity
+msgid "Cubic Capacity"
+msgstr "Cantidad de m3"
+
+#. module: partner_fields
+#: model:ir.model.fields,field_description:partner_fields.field_res_partner__decision_maker
+#: model:ir.model.fields,field_description:partner_fields.field_res_users__decision_maker
+msgid "Decision Maker"
+msgstr "Tomador de decisiones"
+
+#. module: partner_fields
+#: model_terms:ir.ui.view,arch_db:partner_fields.GLB_fields
+msgid "Fuel"
+msgstr "Combustible"
+
+#. module: partner_fields
+#: model:ir.model.fields,field_description:partner_fields.field_res_partner__fumigator
+#: model:ir.model.fields,field_description:partner_fields.field_res_users__fumigator
+msgid "Fumigator"
+msgstr "Fumigadora"
+
+#. module: partner_fields
+#: model_terms:ir.ui.view,arch_db:partner_fields.GLB_fields
+msgid "General"
+msgstr "General"
+
+#. module: partner_fields
+#: model:ir.model.fields,field_description:partner_fields.field_res_partner__grade_2_diesel
+#: model:ir.model.fields,field_description:partner_fields.field_res_users__grade_2_diesel
+msgid "Grade 2 Diesel"
+msgstr "Diesel Grado 2"
+
+#. module: partner_fields
+#: model:ir.model.fields,field_description:partner_fields.field_res_partner__grade_3_diesel
+#: model:ir.model.fields,field_description:partner_fields.field_res_users__grade_3_diesel
+msgid "Grade 3 Diesel"
+msgstr "Diesel Grado 3"
+
+#. module: partner_fields
+#: model:ir.model.fields,field_description:partner_fields.field_res_partner__grease
+#: model:ir.model.fields,field_description:partner_fields.field_res_users__grease
+msgid "Grease"
+msgstr "Grasa"
+
+#. module: partner_fields
+#: model:ir.model.fields,field_description:partner_fields.field_res_partner__grease_qty
+#: model:ir.model.fields,field_description:partner_fields.field_res_users__grease_qty
+msgid "Grease Qty"
+msgstr "Grasa"
+
+#. module: partner_fields
+#: model:ir.model.fields,field_description:partner_fields.field_res_partner__harvester
+#: model:ir.model.fields,field_description:partner_fields.field_res_users__harvester
+msgid "Harvester"
+msgstr "Cosechadora"
+
+#. module: partner_fields
+#: model:ir.model.fields,field_description:partner_fields.field_res_partner__hidraulic_oil
+#: model:ir.model.fields,field_description:partner_fields.field_res_users__hidraulic_oil
+msgid "Hidraulic Oil"
+msgstr "Aceite hidraulico"
+
+#. module: partner_fields
+#: model:ir.model.fields,field_description:partner_fields.field_res_partner__hidraulic_oil_qty
+#: model:ir.model.fields,field_description:partner_fields.field_res_users__hidraulic_oil_qty
+msgid "Hidraulic Oil Qty"
+msgstr "Aceite hidraulico"
+
+#. module: partner_fields
+#: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__main_activity__industry
+msgid "Industry"
+msgstr "Industria"
+
+#. module: partner_fields
+#: model:ir.model.fields,field_description:partner_fields.field_res_partner__inhouse_storage
+#: model:ir.model.fields,field_description:partner_fields.field_res_users__inhouse_storage
+msgid "Inhouse Storage"
+msgstr "Almacenaje en Instalaciones"
+
+#. module: partner_fields
+#: model:ir.model.fields,field_description:partner_fields.field_res_partner__john_deere_oil
+#: model:ir.model.fields,field_description:partner_fields.field_res_users__john_deere_oil
+msgid "John Deere Oil"
+msgstr "John Deere"
+
+#. module: partner_fields
+#: model_terms:ir.ui.view,arch_db:partner_fields.GLB_fields
+msgid "Lubricants"
+msgstr "Lubricantes"
+
+#. module: partner_fields
+#: model_terms:ir.ui.view,arch_db:partner_fields.GLB_fields
+msgid "Machinery"
+msgstr "Maquinaria"
+
+#. module: partner_fields
+#: model:ir.model.fields,field_description:partner_fields.field_res_partner__main_activity
+#: model:ir.model.fields,field_description:partner_fields.field_res_users__main_activity
+msgid "Main Activity"
+msgstr "Actividad Principal"
+
+#. module: partner_fields
+#: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__decision_maker__manager
+msgid "Manager"
+msgstr "Encargado"
+
+#. module: partner_fields
+#: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__grease_qty__>1500
+#: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__hidraulic_oil_qty__>1500
+#: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__motor_oil_qty__>1500
+#: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__transmission_oil_qty__>1500
+#: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__urea_qty__>1500
+msgid "More than 1.500"
+msgstr "Mas de 1.500"
+
+#. module: partner_fields
+#: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__grade_2_diesel__>15000
+#: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__grade_3_diesel__>15000
+msgid "More than 15000"
+msgstr "Mas de 15.000"
+
+#. module: partner_fields
+#: model:ir.model.fields,field_description:partner_fields.field_res_partner__motor_oil
+#: model:ir.model.fields,field_description:partner_fields.field_res_users__motor_oil
+msgid "Motor Oil"
+msgstr "Aceite Motor"
+
+#. module: partner_fields
+#: model:ir.model.fields,field_description:partner_fields.field_res_partner__motor_oil_qty
+#: model:ir.model.fields,field_description:partner_fields.field_res_users__motor_oil_qty
+msgid "Motor Oil Qty"
+msgstr "Aceite Motor"
+
+#. module: partner_fields
+#: model:ir.model.fields,field_description:partner_fields.field_res_partner__operates_grain_exchange
+#: model:ir.model.fields,field_description:partner_fields.field_res_users__operates_grain_exchange
+msgid "Operates Grain Exchange"
+msgstr "Opera por Canje de Granos"
+
+#. module: partner_fields
+#: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__decision_maker__other
+msgid "Other"
+msgstr "Otro"
+
+#. module: partner_fields
+#: model:ir.model.fields,field_description:partner_fields.field_res_partner__other_crop
+#: model:ir.model.fields,field_description:partner_fields.field_res_users__other_crop
+msgid "Other Crop"
+msgstr "Otro Cultivo"
+
+#. module: partner_fields
+#: model:ir.model.fields,field_description:partner_fields.field_res_partner__other_lubricant_brand
+#: model:ir.model.fields,field_description:partner_fields.field_res_users__other_lubricant_brand
+msgid "Other Lubricant Brand"
+msgstr "Otra Marca de Lubricante"
+
+#. module: partner_fields
+#: model:ir.model.fields,field_description:partner_fields.field_res_partner__other_lubricant_type
+#: model:ir.model.fields,field_description:partner_fields.field_res_users__other_lubricant_type
+msgid "Other Lubricant Type"
+msgstr "Otro Tipo de Lubricante"
+
+#. module: partner_fields
+#: model:ir.model.fields,field_description:partner_fields.field_res_partner__other_lubricant_type_qty
+#: model:ir.model.fields,field_description:partner_fields.field_res_users__other_lubricant_type_qty
+msgid "Other Lubricant Type Qty"
+msgstr "Otro Tipo de Lubricante"
+
+#. module: partner_fields
+#: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__decision_maker__owner
+msgid "Owner"
+msgstr "Dueño"
+
+#. module: partner_fields
+#: model:ir.model.fields,field_description:partner_fields.field_res_partner__peanuts
+#: model:ir.model.fields,field_description:partner_fields.field_res_users__peanuts
+msgid "Peanuts"
+msgstr "Maní"
+
+#. module: partner_fields
+#: model:ir.model.fields,field_description:partner_fields.field_res_partner__plantable_area
+#: model:ir.model.fields,field_description:partner_fields.field_res_users__plantable_area
+msgid "Plantable Area"
+msgstr "Hectáreas Siembra/Cosecha"
+
+#. module: partner_fields
+#: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__main_activity__producer_contractor
+msgid "Producer/Contractor"
+msgstr "Productor/Contratista"
+
+#. module: partner_fields
+#: model_terms:ir.ui.view,arch_db:partner_fields.GLB_fields
+msgid "Profile"
+msgstr "Perfil"
+
+#. module: partner_fields
+#: model:ir.model.fields,field_description:partner_fields.field_res_partner__ripper
+#: model:ir.model.fields,field_description:partner_fields.field_res_users__ripper
+msgid "Ripper"
+msgstr "Arrancadora"
+
+#. module: partner_fields
+#: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__zone__sl1
+msgid "SL1"
+msgstr ""
+
+#. module: partner_fields
+#: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__zone__sl2
+msgid "SL2"
+msgstr ""
+
+#. module: partner_fields
+#: model:ir.model.fields,field_description:partner_fields.field_res_partner__seeder
+#: model:ir.model.fields,field_description:partner_fields.field_res_users__seeder
+msgid "Seeder"
+msgstr "Sembradora"
+
+#. module: partner_fields
+#: model:ir.model.fields,field_description:partner_fields.field_res_partner__shell_oil
+#: model:ir.model.fields,field_description:partner_fields.field_res_users__shell_oil
+msgid "Shell Oil"
+msgstr "Shell"
+
+#. module: partner_fields
+#: model:ir.model.fields,field_description:partner_fields.field_res_partner__shreder
+#: model:ir.model.fields,field_description:partner_fields.field_res_users__shreder
+msgid "Shreder"
+msgstr "Picadora"
+
+#. module: partner_fields
+#: model:ir.model.fields,field_description:partner_fields.field_res_partner__soy
+#: model:ir.model.fields,field_description:partner_fields.field_res_users__soy
+msgid "Soy"
+msgstr "Soja"
+
+#. module: partner_fields
+#: model:ir.model.fields,field_description:partner_fields.field_res_partner__tractor
+#: model:ir.model.fields,field_description:partner_fields.field_res_users__tractor
+msgid "Tractor"
+msgstr "Tractor"
+
+#. module: partner_fields
+#: model:ir.model.fields,field_description:partner_fields.field_res_partner__transmission_oil
+#: model:ir.model.fields,field_description:partner_fields.field_res_users__transmission_oil
+msgid "Transmission Oil"
+msgstr "Aceite de Transmisión"
+
+#. module: partner_fields
+#: model:ir.model.fields,field_description:partner_fields.field_res_partner__transmission_oil_qty
+#: model:ir.model.fields,field_description:partner_fields.field_res_users__transmission_oil_qty
+msgid "Transmission Oil Qty"
+msgstr "Aceite de Transmisión"
+
+#. module: partner_fields
+#: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__main_activity__transport
+msgid "Transporter"
+msgstr "Transportista"
+
+#. module: partner_fields
+#: model_terms:ir.ui.view,arch_db:partner_fields.GLB_fields
+msgid "Types"
+msgstr "Tipos"
+
+#. module: partner_fields
+#: model:ir.model.fields,field_description:partner_fields.field_res_partner__urea
+#: model:ir.model.fields,field_description:partner_fields.field_res_users__urea
+msgid "Urea"
+msgstr "Urea"
+
+#. module: partner_fields
+#: model:ir.model.fields,field_description:partner_fields.field_res_partner__urea_qty
+#: model:ir.model.fields,field_description:partner_fields.field_res_users__urea_qty
+msgid "Urea Qty"
+msgstr "Urea"
+
+#. module: partner_fields
+#: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__decision_maker__user
+msgid "User"
+msgstr "Usuario"
+
+#. module: partner_fields
+#: model:ir.model.fields,field_description:partner_fields.field_res_partner__vehicle_qty
+#: model:ir.model.fields,field_description:partner_fields.field_res_users__vehicle_qty
+msgid "Vehicle Qty"
+msgstr "Cantidad de Vehículos"
+
+#. module: partner_fields
+#: model:ir.model.fields,field_description:partner_fields.field_res_partner__corn
+#: model:ir.model.fields,field_description:partner_fields.field_res_users__corn
+msgid "Corn"
+msgstr "Maiz"
+
+#. module: partner_fields
+#: model:ir.model.fields,field_description:partner_fields.field_res_partner__ypf_oil
+#: model:ir.model.fields,field_description:partner_fields.field_res_users__ypf_oil
+msgid "YPF Oil"
+msgstr "YPF"
+
+#. module: partner_fields
+#: model:ir.model.fields,field_description:partner_fields.field_res_partner__zone
+#: model:ir.model.fields,field_description:partner_fields.field_res_users__zone
+msgid "Zone"
+msgstr "Zona"
+
+#. module: partner_fields
+#: model_terms:ir.ui.view,arch_db:partner_fields.GLB_fields
+msgid "oils"
+msgstr "Aceites"

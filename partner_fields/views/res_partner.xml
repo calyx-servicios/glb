@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id="GLB_fields" model="ir.ui.view">
+        <field name="name">res.partner.view.form</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook/page[@name='sales_purchases']/group/group[@name='sale']" position="inside">
+                <field name='zone'/>
+                <field name='main_activity'/>
+                <field name='decision_maker'/>
+            </xpath>
+            <xpath expr="//notebook">
+                <page name="profile" string="Profile">
+
+                    <group name="general" string="General">
+                        <field name="inhouse_storage"/>
+                        <field name="cubic_capacity"/>
+                        <field name="vehicle_qty"/>
+                        <field name="average_mileage"/>
+                    </group>
+                    <group name="agro" string="Agro">
+
+                        <label for="operates_grain_exchange" style="font-weight: bold"/>
+                        <field name="operates_grain_exchange" class="oe_inline"/>
+                        <label for="plantable_area" style="font-weight: bold"/>
+                        <field name="plantable_area" class="oe_inline"/>
+
+                        <group name='crops' string="Crops">
+                            <group>
+                                <field name="soy"/>
+                                <field name="corn"/>
+                                <field name="peanuts"/>
+                            </group>
+                            <label for="other_crop" style="font-weight: bold"/>
+                            <field name="other_crop"/>
+                        </group>
+                        <group name='machinery' string="Machinery">
+                            <group>
+                                <field name="tractor"/>
+                                <field name="harvester"/>
+                                <field name="seeder"/>
+                                <field name="fumigator"/>
+                                <field name="shreder"/>
+                                <field name="ripper"/>
+                            </group>
+                            <label for="brands_and_models" style="font-weight: bold"/>
+                            <field name="brands_and_models" style="margin-right : 105px"/>
+                        </group>
+
+                    </group>
+
+                </page>
+                <page name='consumption' string="Consumption">
+                    <!-- <group name="container"> -->
+                    <group name="lubricants" string="Lubricants">
+                        <group name="brands" string="Brands">
+                            <field name="shell_oil"/>
+                            <field name="ypf_oil"/>
+                            <field name="castrol_oil"/>
+                            <field name="john_deere_oil"/>
+                            <field name="other_lubricant_brand"/>
+                        </group>
+                        <group name="types" string="Types">
+                            <field name="urea"/>
+                            <field name="transmission_oil"/>
+                            <field name="motor_oil"/>
+                            <field name="hidraulic_oil"/>
+                            <field name="grease"/>
+                            <field name="other_lubricant_type"/>
+                        </group>
+                    </group>
+                    <group name="annual_consumption" string="Annual Consumption">
+                        <group name="fuel" string="Fuel" col="2">
+                            <field name="grade_2_diesel"/>
+                            <field name="grade_3_diesel"/>
+                        </group>
+                        <group name="oils" string="oils">
+                            <field name="urea_qty"/>
+                            <field name="transmission_oil_qty"/>
+                            <field name="motor_oil_qty"/>
+                            <field name="hidraulic_oil_qty"/>
+                            <field name="grease_qty"/>
+                            <field name="other_lubricant_type_qty"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>
+<!-- <xpath expr="//notebook">
+                <page string="Sales">
+                    <group name = "sales">
+                        <group name = "sales_fields" priority="1">
+                        </group>
+                        <group name = "sales_fields_2" priority="2">
+                        </group>
+                        <group name="misc" string="Misc.">
+                            <field name="ref" string="Reference"/>
+                            <field name="company_id" options="{'no_create': True}" attrs="{'readonly': [('parent_id', '!=', False)]}"/>
+                            <field name="website_id"/>
+                            <field name="industry_id" attrs="{'invisible': [('is_company', '=', False)]}"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath> -->
