@@ -27,3 +27,9 @@ This file has the suggested Python Pylint package configuration. To install the 
 To disable errors that the developer doesn't want to consider, check the table here:
 
 `https://github.com/OCA/pylint-odoo`
+
+# Build image
+
+`docker buildx build --platform linux/amd64 -t calyxodoo/glb . --load --no-cache --progress=plain`
+
+`docker push calyxodoo/glb`
