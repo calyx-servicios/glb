@@ -88,20 +88,42 @@
             </xpath>
         </field>
     </record>
+    
+
+    <record id="glb_custom_labels" model="ir.ui.view">
+      <field name="name">res.partner.view.form.custom</field>
+      <field name="model">res.partner</field>
+      <field name="inherit_id" ref="account.view_partner_property_form"/>
+      <field name="arch" type="xml">
+
+        <xpath expr="//group[@name='purchase']" position="replace">
+          <group name="name" string=""></group>  
+        </xpath>      
+      </field>
+    </record>
+
+    <record id="glb_custom_labels_customize" model="ir.ui.view">
+      <field name="name">res.partner.view.form.customize</field>
+      <field name="model">res.partner</field>
+      <field name="inherit_id" ref="l10n_ar_ux.view_partner_property_form"/>
+      <field name="arch" type="xml">
+
+        <xpath expr="//group[@name='others']" position="replace">
+          <group name="name" string=""></group>  
+        </xpath>
+
+        <xpath expr="//field[@name='imp_iva_padron']" position="after">
+           <label for="l10n_ar_gross_income_number" string="Ingresos Brutos"/>
+            <div>
+                <field name="l10n_ar_gross_income_type" class="oe_inline"/>
+                <field name="l10n_ar_gross_income_number" placeholder="Number..." class="oe_inline" attrs="{'invisible': [('l10n_ar_gross_income_type', 'not in', ['multilateral', 'local'])], 'required': [('l10n_ar_gross_income_type', 'in', ['multilateral', 'local'])]}"/>
+                <field name="gross_income_jurisdiction_ids" widget="many2many_tags" placeholder="Other Jurisdictions" class="oe_inline" attrs="{'invisible': [('l10n_ar_gross_income_type', '!=', 'multilateral')]}"/>
+            </div>
+        </xpath>      
+
+      </field>
+    </record>
+
+
+
 </odoo>
-<!-- <xpath expr="//notebook">
-                <page string="Sales">
-                    <group name = "sales">
-                        <group name = "sales_fields" priority="1">
-                        </group>
-                        <group name = "sales_fields_2" priority="2">
-                        </group>
-                        <group name="misc" string="Misc.">
-                            <field name="ref" string="Reference"/>
-                            <field name="company_id" options="{'no_create': True}" attrs="{'readonly': [('parent_id', '!=', False)]}"/>
-                            <field name="website_id"/>
-                            <field name="industry_id" attrs="{'invisible': [('is_company', '=', False)]}"/>
-                        </group>
-                    </group>
-                </page>
-            </xpath> -->

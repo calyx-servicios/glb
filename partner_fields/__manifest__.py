@@ -14,7 +14,7 @@
     "application": False,
     "installable": True,
     "external_dependencies": {"python": [], "bin": []},
-    "depends": ['base','contacts','sale'],
+    "depends": ['base','contacts','sale', 'account', 'l10n_ar_ux'],
     "data": [
         "views/res_partner.xml",
     ],
