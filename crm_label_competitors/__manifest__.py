@@ -27,8 +27,8 @@
         # 'security/ir.model.access.csv',
         'views/views.xml',
         'views/templates.xml',
-        # 'views/crm_competitors.xml',
-        # 'views/crm_add_menu_competitors.xml',
+        'views/crm_competitors.xml',
+        'views/crm_add_menu_competitors.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
