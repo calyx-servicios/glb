@@ -480,3 +480,8 @@ msgstr "Zona"
 #: model_terms:ir.ui.view,arch_db:partner_fields.GLB_fields
 msgid "oils"
 msgstr "Aceites"
+
+#. module: base
+#: model_terms:ir.ui.view,arch_db:base.view_partner_form
+msgid "Sales & Purchase"
+msgstr "Venta"
