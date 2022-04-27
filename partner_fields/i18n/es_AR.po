@@ -303,7 +303,7 @@ msgstr "Aceite Motor"
 #. module: partner_fields
 #: model_terms:ir.ui.view,arch_db:partner_fields.glb_custom_labels_customize
 msgid "Number..."
-msgstr ""
+msgstr "Número..."
 
 #. module: partner_fields
 #: model:ir.model.fields,field_description:partner_fields.field_res_partner__operates_grain_exchange
@@ -326,7 +326,7 @@ msgstr "Otro Cultivo"
 #. module: partner_fields
 #: model_terms:ir.ui.view,arch_db:partner_fields.glb_custom_labels_customize
 msgid "Other Jurisdictions"
-msgstr ""
+msgstr "Otras Jurisdicciones"
 
 #. module: partner_fields
 #: model:ir.model.fields,field_description:partner_fields.field_res_partner__other_lubricant_brand
