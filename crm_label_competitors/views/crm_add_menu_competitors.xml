@@ -42,7 +42,7 @@
         <field name="res_model">crm.label.competitors.registry</field>
         <field name="type">ir.actions.act_window</field>
         <field name="view_mode">tree,form</field>
-        <field name="view_id" ref="crm_label_competitors.crm_label_competitors_form"/>
+        <field name="view_id" ref="crm_label_competitors.crm_label_competitors_tree"/>
     </record>
 
     <menuitem 
