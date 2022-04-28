@@ -26,6 +26,7 @@
     'data': [
         'security/ir.model.access.csv',
         'views/crm_add_menu_competitors.xml',
+        'wizards/crm_lead_lost_custom.xml'
     ],
     # only loaded in demonstration mode
     'demo': [
