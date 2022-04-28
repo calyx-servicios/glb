@@ -232,11 +232,6 @@ msgid "Industry"
 msgstr "Industria"
 
 #. module: partner_fields
-#: model_terms:ir.ui.view,arch_db:partner_fields.glb_custom_labels_customize
-msgid "Ingresos Brutos"
-msgstr ""
-
-#. module: partner_fields
 #: model:ir.model.fields,field_description:partner_fields.field_res_partner__inhouse_storage
 #: model:ir.model.fields,field_description:partner_fields.field_res_users__inhouse_storage
 msgid "Inhouse Storage"
