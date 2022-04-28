@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+
+<odoo>
+
+    <record id="crm_lead_lost_custom_wizard" model="ir.ui.view">
+      <field name="name">crm.lead.lost.custom.wizard</field>
+      <field name="model">crm.lead.lost</field>
+      <field name="inherit_id" ref="crm.crm_lead_lost_view_form"/>
+      <field name="arch" type="xml">
+
+        <xpath expr="//field[@name='lost_reason_id']" position="after">
+          <field name="label_competitors_ids" widget='many2many_tags' create="0" />
+        </xpath>      
+      </field>
+    </record>
+
+</odoo>
