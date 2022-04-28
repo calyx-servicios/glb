@@ -10,7 +10,7 @@ class ResPartner(models.Model):
 
     # _____________SALES TAB_______________
     zone = fields.Selection(
-        [("A", "A"), ("B", "B"), ("C", "C"), ("SL1", "SL1"), ("SL2", "SL2")],
+        [("A", "A"), ("B1", "B1"),("B2","B2"), ("C", "C"), ("SL1", "SL1"), ("SL2", "SL2")],
         string="Zone",
     )
     main_activity = fields.Selection(
@@ -20,6 +20,8 @@ class ResPartner(models.Model):
             ("industry", "Industry"),
             ("agro_contractor", "Agricultural Contractor"),
             ("producer_contractor", "Producer/Contractor"),
+            ("fuel_dispenser","Fuel Dispensers"),
+            ("other", "Other"), 
         ],
         string="Main Activity",
     )
