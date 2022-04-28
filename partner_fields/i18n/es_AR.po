@@ -27,7 +27,7 @@ msgstr ""
 #. module: partner_fields
 #: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__urea_qty__1_000-1_500
 msgid "1.000-1.500"
-msgstr ""
+msgstr "1.000-1.500"
 
 #. module: partner_fields
 #: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__grease_qty__1000-1500
@@ -35,19 +35,19 @@ msgstr ""
 #: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__motor_oil_qty__1000-1500
 #: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__transmission_oil_qty__1000-1500
 msgid "1000-1500"
-msgstr ""
+msgstr "1.000-1.500"
 
 #. module: partner_fields
 #: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__grade_2_diesel__1000-5000
 #: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__grade_3_diesel__1000-5000
 msgid "1000-5000"
-msgstr ""
+msgstr "1.000-5.000"
 
 #. module: partner_fields
 #: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__grade_2_diesel__10000-15000
 #: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__grade_3_diesel__10000-15000
 msgid "10000-15000"
-msgstr ""
+msgstr "10.000-15.000"
 
 #. module: partner_fields
 #: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__grease_qty__200-600
@@ -62,7 +62,7 @@ msgstr ""
 #: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__grade_2_diesel__5000-10000
 #: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__grade_3_diesel__5000-10000
 msgid "5000-10000"
-msgstr ""
+msgstr "5.000-10.000"
 
 #. module: partner_fields
 #: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__urea_qty__600-1000
@@ -75,7 +75,7 @@ msgstr ""
 #: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__motor_oil_qty__600-1000
 #: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__transmission_oil_qty__600-1000
 msgid "600-1000"
-msgstr ""
+msgstr "600-1.000"
 
 #. module: partner_fields
 #: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__main_activity__agro_contractor
@@ -272,7 +272,7 @@ msgstr "Encargado"
 #. module: partner_fields
 #: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__urea_qty__>1500
 msgid "More than 1.500"
-msgstr ""
+msgstr "Más de 1.500"
 
 #. module: partner_fields
 #: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__grease_qty__>1500
@@ -280,13 +280,13 @@ msgstr ""
 #: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__motor_oil_qty__>1500
 #: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__transmission_oil_qty__>1500
 msgid "More than 1500"
-msgstr ""
+msgstr "Más de 1500"
 
 #. module: partner_fields
 #: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__grade_2_diesel__>15000
 #: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__grade_3_diesel__>15000
 msgid "More than 15000"
-msgstr ""
+msgstr "Más de 15.000"
 
 #. module: partner_fields
 #: model:ir.model.fields,field_description:partner_fields.field_res_partner__motor_oil
