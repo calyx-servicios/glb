@@ -9,7 +9,7 @@
       <field name="arch" type="xml">
 
         <xpath expr="//field[@name='lost_reason_id']" position="after">
-          <field name="label_competitors_ids" widget='many2many_tags' />
+          <field name="label_competitors_ids" widget='many2many_tags' create="0" />
         </xpath>      
       </field>
     </record>

@@ -27,16 +27,6 @@
         </field>
     </record>
 
-
-    <!-- actions opening views on models -->
-
-    <!-- <record model="ir.actions.act_window" id="crm_label_competitors_action">
-      <field name="name">nombre vista dos</field>
-      <field name="res_model">crm.label.competitors.registry</field>
-      <field name="view_id" ref="crm_label_competitors_form"></field>
-      <field name="view_mode">form,tree</field>
-    </record> -->
-
     <record model="ir.actions.act_window" id="crm_label_competitors_action">
         <field name="name">Labels competitors</field>
         <field name="res_model">crm.label.competitors.registry</field>
@@ -52,5 +42,4 @@
         sequence="11"
         action="crm_label_competitors_action"
     />
-        <!-- groups="base.group_system" -->
 </odoo>
