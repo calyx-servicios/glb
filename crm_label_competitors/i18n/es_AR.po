@@ -4,10 +4,11 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 13.0\n"
+
+"Project-Id-Version: Odoo Server 13.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-04-28 16:36+0000\n"
-"PO-Revision-Date: 2022-04-28 16:36+0000\n"
+"POT-Creation-Date: 2022-05-03 20:19+0000\n"
+"PO-Revision-Date: 2022-05-03 20:19+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -17,23 +18,34 @@ msgstr ""
 
 #. module: crm_label_competitors
 #: model:ir.model.fields,field_description:crm_label_competitors.field_crm_lead_lost__label_competitors_ids
+#: model_terms:ir.ui.view,arch_db:crm_label_competitors.crm_lead_search_view_inherit
+msgid "Competitor"
+msgstr "Competencia"
+
+#. module: crm_label_competitors
+#: code:addons/crm_label_competitors/models/crm_lead.py:0
+#: model:ir.model.fields,field_description:crm_label_competitors.field_crm_lead__competitors_tags
+#: model:ir.model.fields,field_description:crm_label_competitors.field_crm_lead_lost__label_competitors_ids
+#: model_terms:ir.ui.view,arch_db:crm_label_competitors.crm_lead_search_view_inherit
+#, python-format
 msgid "Competitors"
 msgstr "Competidores"
 
 #. module: crm_label_competitors
 #: model:ir.model.fields,field_description:crm_label_competitors.field_crm_label_competitors_registry__create_uid
 msgid "Created by"
-msgstr ""
+msgstr "Creado por"
+
 
 #. module: crm_label_competitors
 #: model:ir.model.fields,field_description:crm_label_competitors.field_crm_label_competitors_registry__create_date
 msgid "Created on"
-msgstr ""
+msgstr "Creado el"
 
 #. module: crm_label_competitors
 #: model:ir.model.fields,field_description:crm_label_competitors.field_crm_label_competitors_registry__display_name
 msgid "Display Name"
-msgstr ""
+msgstr "Nombre para mostrar"
 
 #. module: crm_label_competitors
 #: model:ir.model,name:crm_label_competitors.model_crm_lead_lost
@@ -43,7 +55,7 @@ msgstr "Ponga la razón de la perdida"
 #. module: crm_label_competitors
 #: model:ir.model.fields,field_description:crm_label_competitors.field_crm_label_competitors_registry__id
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. module: crm_label_competitors
 #: model:ir.actions.act_window,name:crm_label_competitors.crm_label_competitors_action
@@ -54,29 +66,36 @@ msgstr "Etiquetas de competidores"
 #. module: crm_label_competitors
 #: model:ir.model.fields,field_description:crm_label_competitors.field_crm_label_competitors_registry____last_update
 msgid "Last Modified on"
-msgstr ""
+msgstr "Última modificación el"
+
 
 #. module: crm_label_competitors
 #: model:ir.model.fields,field_description:crm_label_competitors.field_crm_label_competitors_registry__write_uid
 msgid "Last Updated by"
-msgstr ""
+msgstr "Última actualización por"
 
 #. module: crm_label_competitors
 #: model:ir.model.fields,field_description:crm_label_competitors.field_crm_label_competitors_registry__write_date
 msgid "Last Updated on"
-msgstr ""
+msgstr "Última actualización el"
 
 #. module: crm_label_competitors
 #: model_terms:ir.ui.view,arch_db:crm_label_competitors.crm_label_competitors_form
 msgid "Lead Tags"
-msgstr ""
+msgstr "Etiquetas de oportunidad"
+
+#. module: crm_label_competitors
+#: model:ir.model,name:crm_label_competitors.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "Iniciativa/Oportunidad"
 
 #. module: crm_label_competitors
 #: model:ir.model,name:crm_label_competitors.model_crm_label_competitors_registry
 msgid "Model registry of competitors"
-msgstr ""
+msgstr "Modelo de competidores"
 
 #. module: crm_label_competitors
 #: model:ir.model.fields,field_description:crm_label_competitors.field_crm_label_competitors_registry__name_competitor
-msgid "Nombre de competidor"
-msgstr ""
+msgid "Name competitor"
+msgstr "Nombre de competidor"
+

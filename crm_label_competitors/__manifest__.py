@@ -12,7 +12,8 @@
     """,
 
     "author": "Calyx Servicios S.A.",
-    "maintainers": [""],
+
+    "maintainers": ["DeykerGil","PerezGabriela"],
     "website": "http://odoo.calyx-cloud.com.ar/",
     "license": "AGPL-3",
     "category": "Custom",
@@ -25,6 +26,7 @@
     'data': [
         'security/ir.model.access.csv',
         'views/crm_add_menu_competitors.xml',
+        'views/crm_views.xml',
         'wizards/crm_lead_lost_custom.xml'
     ]
 
