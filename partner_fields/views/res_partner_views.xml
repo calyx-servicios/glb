@@ -124,6 +124,40 @@
       </field>
     </record>
 
+    <record id="glb_custom_labels_invoiced" model="ir.ui.view">
+      <field name="name">partner.view.buttons.custom</field>
+      <field name="model">res.partner</field>
+      <field name="inherit_id" ref="account.partner_view_buttons"/>
+      <field name="arch" type="xml">
+
+        <xpath expr="//button[@name='action_view_partner_invoices']" position="replace">  
+          
+          <button type="object" class="oe_stat_button" invisible='1' icon="fa-pencil-square-o" name="action_view_partner_invoices" context="{'default_partner_id': active_id}">
+            <div class="o_form_field o_stat_info">
+                <span class="o_stat_value">
+                    <field name="total_invoiced" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                </span>
+                <span class="o_stat_text">Invoiced</span>
+            </div>
+          </button>  
+
+        </xpath>      
+      </field>
+    </record>
+
+    <record id="glb_custom_labels_payment" model="ir.ui.view">
+      <field name="name">partner.view.buttons.custom.payment</field>
+      <field name="model">res.partner</field>
+      <field name="inherit_id" ref="account_ux.res_partner_view_buttons"/>
+      <field name="arch" type="xml">
+
+        <xpath expr="//button[@name='action_open_reconcile']" position="replace">  
+          <button class="oe_stat_button" type="object" name="action_open_reconcile" invisible='1' icon="fa-usd" string="Match Payments"></button>
+        </xpath>      
+        
+      </field>
+    </record>
+
 
 
 </odoo>
