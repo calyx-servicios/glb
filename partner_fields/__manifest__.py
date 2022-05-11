@@ -16,6 +16,6 @@
     "external_dependencies": {"python": [], "bin": []},
     "depends": ['base','contacts','sale', 'account', 'l10n_ar_ux'],
     "data": [
-        "views/model_views.xml",
+        "views/res_partner_views.xml",
     ],
 }
