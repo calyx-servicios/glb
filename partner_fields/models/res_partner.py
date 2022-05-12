@@ -9,8 +9,17 @@ class ResPartner(models.Model):
     _inherit = "res.partner"
 
     # _____________SALES TAB_______________
-    zone = fields.Selection(
-        [("A", "A"), ("B1", "B1"),("B2","B2"), ("C", "C"), ("SL1", "SL1"), ("SL2", "SL2")],
+    zone = fields.Selection([
+        ("A", "A"),
+        ("B1", "B1"),
+        ("B2","B2"),
+        ("C", "C"),
+        ("SL1", "SL1"),
+        ("SL2", "SL2"),
+        ("EESS_SUPPLY","EESS ABASTO"),
+        ("EESS_ALEJANDRO","EESS ALEJANDRO"),
+        ("CORDOBA_WHOLESALER","MAYORISTA CORDOBA")
+        ],
         string="Zone",
     )
     main_activity = fields.Selection(
