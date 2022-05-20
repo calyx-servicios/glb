@@ -26,7 +26,7 @@
     'data': [
         'security/ir.model.access.csv',
         'views/crm_add_menu_competitors.xml',
-        'views/crm_views.xml',
+        'views/crm_lead_views.xml',
         'wizards/crm_lead_lost_custom.xml'
     ]
 
