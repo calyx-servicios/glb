@@ -4,10 +4,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 13.0-20220401\n"
+"Project-Id-Version: Odoo Server 13.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-04-27 13:13+0000\n"
-"PO-Revision-Date: 2022-04-27 13:13+0000\n"
+"POT-Creation-Date: 2022-04-07 21:57+0000\n"
+"PO-Revision-Date: 2022-04-07 21:57+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -25,16 +25,12 @@ msgid "0-200"
 msgstr ""
 
 #. module: partner_fields
+#: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__grease_qty__1_000-1_500
+#: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__hidraulic_oil_qty__1_000-1_500
+#: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__motor_oil_qty__1_000-1_500
+#: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__transmission_oil_qty__1_000-1_500
 #: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__urea_qty__1_000-1_500
 msgid "1.000-1.500"
-msgstr ""
-
-#. module: partner_fields
-#: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__grease_qty__1000-1500
-#: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__hidraulic_oil_qty__1000-1500
-#: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__motor_oil_qty__1000-1500
-#: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__transmission_oil_qty__1000-1500
-msgid "1000-1500"
 msgstr ""
 
 #. module: partner_fields
@@ -65,16 +61,12 @@ msgid "5000-10000"
 msgstr ""
 
 #. module: partner_fields
-#: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__urea_qty__600-1000
-msgid "600-1.000"
-msgstr ""
-
-#. module: partner_fields
 #: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__grease_qty__600-1000
 #: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__hidraulic_oil_qty__600-1000
 #: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__motor_oil_qty__600-1000
 #: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__transmission_oil_qty__600-1000
-msgid "600-1000"
+#: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__urea_qty__600-1000
+msgid "600-1.000"
 msgstr ""
 
 #. module: partner_fields
@@ -90,7 +82,7 @@ msgstr "Productor agropecuario"
 #. module: partner_fields
 #: model_terms:ir.ui.view,arch_db:partner_fields.GLB_fields
 msgid "Agro"
-msgstr ""
+msgstr "Agro"
 
 #. module: partner_fields
 #: model_terms:ir.ui.view,arch_db:partner_fields.GLB_fields
@@ -102,16 +94,6 @@ msgstr "Consumo anual"
 #: model:ir.model.fields,field_description:partner_fields.field_res_users__average_mileage
 msgid "Average Mileage"
 msgstr "Kilometraje promedio"
-
-#. module: partner_fields
-#: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__zone__b1
-msgid "B1"
-msgstr ""
-
-#. module: partner_fields
-#: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__zone__b2
-msgid "B2"
-msgstr ""
 
 #. module: partner_fields
 #: model_terms:ir.ui.view,arch_db:partner_fields.GLB_fields
@@ -141,12 +123,6 @@ msgid "Contact"
 msgstr "Contacto"
 
 #. module: partner_fields
-#: model:ir.model.fields,field_description:partner_fields.field_res_partner__corn
-#: model:ir.model.fields,field_description:partner_fields.field_res_users__corn
-msgid "Corn"
-msgstr "Maiz"
-
-#. module: partner_fields
 #: model_terms:ir.ui.view,arch_db:partner_fields.GLB_fields
 msgid "Crops"
 msgstr "Cultivos"
@@ -169,11 +145,6 @@ msgid "Fuel"
 msgstr "Combustible"
 
 #. module: partner_fields
-#: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__main_activity__fuel_dispenser
-msgid "Fuel Dispensers"
-msgstr "Expendedores de Combustible"
-
-#. module: partner_fields
 #: model:ir.model.fields,field_description:partner_fields.field_res_partner__fumigator
 #: model:ir.model.fields,field_description:partner_fields.field_res_users__fumigator
 msgid "Fumigator"
@@ -182,7 +153,7 @@ msgstr "Fumigadora"
 #. module: partner_fields
 #: model_terms:ir.ui.view,arch_db:partner_fields.GLB_fields
 msgid "General"
-msgstr ""
+msgstr "General"
 
 #. module: partner_fields
 #: model:ir.model.fields,field_description:partner_fields.field_res_partner__grade_2_diesel
@@ -232,11 +203,6 @@ msgid "Industry"
 msgstr "Industria"
 
 #. module: partner_fields
-#: model_terms:ir.ui.view,arch_db:partner_fields.glb_custom_labels_customize
-msgid "Ingresos Brutos"
-msgstr ""
-
-#. module: partner_fields
 #: model:ir.model.fields,field_description:partner_fields.field_res_partner__inhouse_storage
 #: model:ir.model.fields,field_description:partner_fields.field_res_users__inhouse_storage
 msgid "Inhouse Storage"
@@ -270,23 +236,19 @@ msgid "Manager"
 msgstr "Encargado"
 
 #. module: partner_fields
-#: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__urea_qty__>1500
-msgid "More than 1.500"
-msgstr ""
-
-#. module: partner_fields
 #: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__grease_qty__>1500
 #: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__hidraulic_oil_qty__>1500
 #: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__motor_oil_qty__>1500
 #: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__transmission_oil_qty__>1500
-msgid "More than 1500"
-msgstr ""
+#: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__urea_qty__>1500
+msgid "More than 1.500"
+msgstr "Mas de 1.500"
 
 #. module: partner_fields
 #: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__grade_2_diesel__>15000
 #: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__grade_3_diesel__>15000
 msgid "More than 15000"
-msgstr ""
+msgstr "Mas de 15.000"
 
 #. module: partner_fields
 #: model:ir.model.fields,field_description:partner_fields.field_res_partner__motor_oil
@@ -301,11 +263,6 @@ msgid "Motor Oil Qty"
 msgstr "Aceite Motor"
 
 #. module: partner_fields
-#: model_terms:ir.ui.view,arch_db:partner_fields.glb_custom_labels_customize
-msgid "Number..."
-msgstr "Número..."
-
-#. module: partner_fields
 #: model:ir.model.fields,field_description:partner_fields.field_res_partner__operates_grain_exchange
 #: model:ir.model.fields,field_description:partner_fields.field_res_users__operates_grain_exchange
 msgid "Operates Grain Exchange"
@@ -313,7 +270,6 @@ msgstr "Opera por Canje de Granos"
 
 #. module: partner_fields
 #: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__decision_maker__other
-#: model:ir.model.fields.selection,name:partner_fields.selection__res_partner__main_activity__other
 msgid "Other"
 msgstr "Otro"
 
@@ -322,11 +278,6 @@ msgstr "Otro"
 #: model:ir.model.fields,field_description:partner_fields.field_res_users__other_crop
 msgid "Other Crop"
 msgstr "Otro Cultivo"
-
-#. module: partner_fields
-#: model_terms:ir.ui.view,arch_db:partner_fields.glb_custom_labels_customize
-msgid "Other Jurisdictions"
-msgstr "Otras Jurisdicciones"
 
 #. module: partner_fields
 #: model:ir.model.fields,field_description:partner_fields.field_res_partner__other_lubricant_brand
@@ -417,7 +368,7 @@ msgstr "Soja"
 #: model:ir.model.fields,field_description:partner_fields.field_res_partner__tractor
 #: model:ir.model.fields,field_description:partner_fields.field_res_users__tractor
 msgid "Tractor"
-msgstr ""
+msgstr "Tractor"
 
 #. module: partner_fields
 #: model:ir.model.fields,field_description:partner_fields.field_res_partner__transmission_oil
@@ -445,7 +396,7 @@ msgstr "Tipos"
 #: model:ir.model.fields,field_description:partner_fields.field_res_partner__urea
 #: model:ir.model.fields,field_description:partner_fields.field_res_users__urea
 msgid "Urea"
-msgstr ""
+msgstr "Urea"
 
 #. module: partner_fields
 #: model:ir.model.fields,field_description:partner_fields.field_res_partner__urea_qty
@@ -463,6 +414,12 @@ msgstr "Usuario"
 #: model:ir.model.fields,field_description:partner_fields.field_res_users__vehicle_qty
 msgid "Vehicle Qty"
 msgstr "Cantidad de Vehículos"
+
+#. module: partner_fields
+#: model:ir.model.fields,field_description:partner_fields.field_res_partner__corn
+#: model:ir.model.fields,field_description:partner_fields.field_res_users__corn
+msgid "Corn"
+msgstr "Maiz"
 
 #. module: partner_fields
 #: model:ir.model.fields,field_description:partner_fields.field_res_partner__ypf_oil
