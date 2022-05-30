@@ -24,14 +24,6 @@
       </xpath>
 
       <xpath expr="//field[@name='pricelist_id']" position="after">
-        <!-- <group name="sale_shipping">
-          <label for="commitment_date" string="Delivery Date"/>
-          <div class="o_row">
-            <field name="commitment_date"/>
-            <span class="text-muted">Expected: <field name="expected_date" widget="date"/>
-            </span>
-          </div>
-        </group> -->
         <field name="commitment_date"/>
       </xpath>
 
