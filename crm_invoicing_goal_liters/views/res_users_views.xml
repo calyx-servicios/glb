@@ -18,4 +18,25 @@
     </field>
   </record>
 
+  <!-- Inherit from base.view_users_form to add liter fields to team member in one page  -->
+  <record id="inherit_base_view_users_form_two" model="ir.ui.view">
+    <field name="name">base.view.users.form.inherit.two</field>
+    <field name="model">res.users</field>
+    <field name="inherit_id" ref="base.view_users_form"/>
+    <field name="arch" type="xml">
+
+      <xpath expr="//notebook" position="inside">
+        <page string="Goals invoicing">
+          <group>
+            <field name="planned_liters"/>
+          </group>
+          <group>
+            <field name="current_liters"/>
+          </group>
+        </page>
+      </xpath>
+
+    </field>
+  </record>
+
 </odoo>
