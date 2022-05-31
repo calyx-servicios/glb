@@ -26,9 +26,9 @@
     <field name="arch" type="xml">
 
       <xpath expr="//notebook" position="inside">
-        <page string="Goals invoicing">
+        <page string="Goals invoicing" groups="base.user_admin">
           <group>
-            <field name="planned_liters"/>
+            <field name="planned_liters" />
           </group>
         </page>
       </xpath>
