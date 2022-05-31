@@ -1,0 +1,55 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* crm_invoicing_goal_liters
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-31 18:52+0000\n"
+"PO-Revision-Date: 2022-05-31 18:52+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: crm_invoicing_goal_liters
+#: code:addons/crm_invoicing_goal_liters/models/crm_team.py:0
+#: code:addons/crm_invoicing_goal_liters/models/res_users.py:0
+#: code:addons/custom-addons/calyx-servicios/glb/crm_invoicing_goal_liters/models/crm_team.py:0
+#: code:addons/custom-addons/calyx-servicios/glb/crm_invoicing_goal_liters/models/res_users.py:0
+#: model:ir.model.fields,field_description:crm_invoicing_goal_liters.field_crm_team__current_liters
+#: model:ir.model.fields,field_description:crm_invoicing_goal_liters.field_res_users__current_liters
+#, python-format
+msgid "Current Liters"
+msgstr "Litros actuales"
+
+#. module: crm_invoicing_goal_liters
+#: model_terms:ir.ui.view,arch_db:crm_invoicing_goal_liters.inherit_base_view_users_form_two
+msgid "Goals invoicing"
+msgstr "Metas de facturación"
+
+#. module: crm_invoicing_goal_liters
+#: model_terms:ir.ui.view,arch_db:crm_invoicing_goal_liters.inherit_base_view_users_simple_form
+msgid "Liters"
+msgstr "Litros"
+
+#. module: crm_invoicing_goal_liters
+#: code:addons/crm_invoicing_goal_liters/models/res_users.py:0
+#: code:addons/custom-addons/calyx-servicios/glb/crm_invoicing_goal_liters/models/res_users.py:0
+#: model:ir.model.fields,field_description:crm_invoicing_goal_liters.field_res_users__planned_liters
+#, python-format
+msgid "Planned Liters"
+msgstr "Litros planificados"
+
+#. module: crm_invoicing_goal_liters
+#: model:ir.model,name:crm_invoicing_goal_liters.model_crm_team
+msgid "Sales Team"
+msgstr "Equipo de ventas"
+
+#. module: crm_invoicing_goal_liters
+#: model:ir.model,name:crm_invoicing_goal_liters.model_res_users
+msgid "Users"
+msgstr "Usuarios"
