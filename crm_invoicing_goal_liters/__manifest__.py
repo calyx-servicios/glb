@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 {
 
     'name': "CRM invoicing goal liters",
@@ -25,7 +24,6 @@
 
     # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
         'views/crm_team_views.xml',
         'views/res_users_views.xml'
     ]

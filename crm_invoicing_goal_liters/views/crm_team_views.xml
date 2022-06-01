@@ -9,7 +9,6 @@
 
       <xpath expr="//field[@name='invoiced_target']" position="after">
         <field name="current_liters" />
-        <!-- attrs="{'invisible': [('active', '=', True)]}" -->
       </xpath>
 
     </field>
