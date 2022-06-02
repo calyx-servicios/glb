@@ -21,12 +21,15 @@ CRM Changes GLB
 |badge1| |badge2| |badge3|
 
 Install
-*******
+=======
 
-# Go to applications
-# Find module "crm_changes_glb"
-# Press Install
-# Go to CRM > and see the modifications
+* Go to applications
+
+* Find module "crm_changes_glb"
+
+* Press Install
+
+* Go to CRM > and see the modifications
 
 
 Known issues / Roadmap
