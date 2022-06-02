@@ -1,6 +1,6 @@
-===========
+===============
 CRM Changes GLB
-===========
+===============
 
 .. !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
    !! Module for general changes to GLB project      !!
@@ -14,14 +14,14 @@ CRM Changes GLB
 .. |badge2| image:: https://img.shields.io/badge/licence-AGPL--3-blue.png
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
-.. |badge3| image:: https://img.shields.io/badge/github-calyx--servicios%2Fcalyx-lightgray.png?logo=github
-    :target: https://github.com/calyx-servicios/calyx.git
-    :alt: calyx-servicios/calyx.git
+.. |badge3| image:: https://img.shields.io/badge/github-calyx--servicios%2Fglb-lightgray.png?logo=github
+    :target: https://github.com/calyx-servicios/glb.git
+    :alt: calyx-servicios/glb.git
 
 |badge1| |badge2| |badge3|
 
 Install
-=======
+*******
 
 # Go to applications
 # Find module "crm_changes_glb"
@@ -66,4 +66,4 @@ This module is maintained by the Calyx Servicios S.A.
 CALYX SERVICIOS S.A. It is part of the PGK Consultores economic group, member of an important global network, a world organization positioned among the 20 largest consultant-studios in the world.
 The PGK Consultores group is one of the 20 largest consultant-studios in Argentina with nearly 200 professionals.
 
-This module is part of the `Repo_name <https://github.com/calyx-servicios/glb>`_ project on Github.
+This module is part of the `GLB <https://github.com/calyx-servicios/glb>`_ project on Github.
