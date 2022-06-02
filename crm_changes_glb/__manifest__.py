@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 {
 
     'name': "CRM Changes GLB",
@@ -19,10 +18,8 @@
     "category": "Custom",
     "version": "13.0.1.0.0",
 
-    # any module necessary for this one to work correctly
     'depends': ['base', 'crm', 'sale'],
 
-    # always loaded
     'data': [
         'views/crm_lead_views.xml',
         'views/sale_order_views.xml',
