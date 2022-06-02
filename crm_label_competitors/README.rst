@@ -22,12 +22,12 @@ CRM Labels competitors
 
 
 Install
-*******
+=======
 
-# Go to applications
-# Find module "crm_label_competitors"
-# Press Install
-# Go to CRM > and see the modifications
+* Go to applications
+* Find module "crm_label_competitors"
+* Press Install
+* Go to CRM > and see the modifications
 
 
 Known issues / Roadmap
