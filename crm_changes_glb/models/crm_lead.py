@@ -9,7 +9,4 @@ class CrmLead(models.Model):
     @api.constrains('estimated_sale_liters')
     def _check_estimated_sale_liters_field(self):
         if not int(self.estimated_sale_liters):
-            raise UserError(_('Field Estimated sale in liters must be an integer.'))
-
-
-        
+            raise UserError(_('Field Estimated sale in liters must be an integer.'))    

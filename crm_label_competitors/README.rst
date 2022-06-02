@@ -1,6 +1,6 @@
-===========================
+======================
 CRM Labels competitors
-===========================
+======================
 
 .. !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
    !! Module to add field of competence to CRM losses     !!
@@ -22,7 +22,7 @@ CRM Labels competitors
 
 
 Install
-=======
+*******
 
 # Go to applications
 # Find module "crm_label_competitors"
@@ -68,4 +68,4 @@ This module is maintained by the Calyx Servicios S.A.
 CALYX SERVICIOS S.A. It is part of the PGK Consultores economic group, member of an important global network, a world organization positioned among the 20 largest consultant-studios in the world.
 The PGK Consultores group is one of the 20 largest consultant-studios in Argentina with nearly 200 professionals.
 
-This module is part of the `Repo_name <https://github.com/calyx-servicios/custom-heben>`_ project on Github.
+This module is part of the `GLB <https://github.com/calyx-servicios/glb>`_ project on Github.
