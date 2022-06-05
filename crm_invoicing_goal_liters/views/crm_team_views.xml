@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+  <record id="view_crm_team_form_inherit" model="ir.ui.view">
+    <field name="name">crm.team.view.inherit</field>
+    <field name="model">crm.team</field>
+    <field name="inherit_id" ref="sale.crm_team_salesteams_view_form"/>
+    <field name="arch" type="xml">
+
+      <xpath expr="//field[@name='invoiced_target']" position="after">
+        <field name="current_liters" />
+      </xpath>
+
+    </field>
+  </record>
+</odoo>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

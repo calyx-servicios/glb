@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+  <!-- Inherit from base.view_users_simple_form to add liter fields to team member  -->
+  <record id="inherit_base_view_users_simple_form" model="ir.ui.view">
+    <field name="name">base.view.users.simple.form.inherit</field>
+    <field name="model">res.users</field>
+    <field name="inherit_id" ref="base.view_users_simple_form"/>
+    <field name="arch" type="xml">
+
+      <xpath expr="//field[@name='company_id']" position="after">
+        <group name="name" string="Liters">
+          <field name="planned_liters"/>
+          <field name="current_liters"/>
+        </group>
+      </xpath>
+
+    </field>
+  </record>
+
+  <!-- Inherit from base.view_users_form to add current liter fields for users -->
+  <record id="inherit_base_view_users_form_two" model="ir.ui.view">
+    <field name="name">base.view.users.form.inherit.two</field>
+    <field name="model">res.users</field>
+    <field name="inherit_id" ref="base.view_users_form"/>
+    <field name="arch" type="xml">
+
+      <xpath expr="//notebook" position="inside">
+        <page string="Goals invoicing" groups="base.user_admin">
+          <group>
+            <field name="planned_liters" />
+          </group>
+        </page>
+      </xpath>
+
+    </field>
+  </record>
+
+</odoo>
