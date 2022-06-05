@@ -1,10 +1,10 @@
-======================
-CRM Labels competitors
-======================
+===============
+CRM Changes GLB
+===============
 
-.. !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-   !! Module to add field of competence to CRM losses     !!
-   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+.. !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+   !! Module for general changes to GLB project      !!
+   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 
 .. User https://shields.io for badge creation.
@@ -14,24 +14,23 @@ CRM Labels competitors
 .. |badge2| image:: https://img.shields.io/badge/licence-AGPL--3-blue.png
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
-.. |badge3| image:: https://img.shields.io/badge/gitlab-calyxservicios--group%2Fodoo%2Fodoo--calyx-lightgray.png?logo=gitlab
-    :target: https://gitlab.com/calyxservicios-group/odoo/odoo-calyx
-    :alt: calyxservicios-group/odoo/odoo-calyx
+.. |badge3| image:: https://img.shields.io/badge/github-calyx--servicios%2Fglb-lightgray.png?logo=github
+    :target: https://github.com/calyx-servicios/glb.git
+    :alt: calyx-servicios/glb.git
 
 |badge1| |badge2| |badge3|
-
 
 Install
 =======
 
-
 * Go to applications
 
-* Find module "crm_label_competitors"
+* Find module "crm_changes_glb"
 
 * Press Install
 
 * Go to CRM > and see the modifications
+
 
 Known issues / Roadmap
 ======================
@@ -57,7 +56,6 @@ Contributors
 * `Calyx Servicios S.A. <http://www.calyxservicios.com.ar/>`_
   
   * Deyker Gil
-  * Perez Gabriela
 
 Maintainers
 ~~~~~~~~~~~
