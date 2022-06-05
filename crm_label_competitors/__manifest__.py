@@ -18,10 +18,8 @@
     "category": "Custom",
     "version": "13.0.1.0.0",
 
-    # any module necessary for this one to work correctly
     'depends': ['base', 'crm'],
 
-    # always loaded
     'data': [
         'security/ir.model.access.csv',
         'views/crm_add_menu_competitors.xml',
