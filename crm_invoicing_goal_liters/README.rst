@@ -1,11 +1,10 @@
-===========
-Module Name
-===========
+=========================
+CRM Invoicing Goal Liters
+=========================
 
-.. !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-   !! This file is intended to be in every module    !!
-   !! to explain why and how it works.               !!
-   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+.. !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+   !! Module for managing and registering goals for GLB invoicing !!
+   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 
 .. User https://shields.io for badge creation.
@@ -15,39 +14,23 @@ Module Name
 .. |badge2| image:: https://img.shields.io/badge/licence-AGPL--3-blue.png
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
-.. |badge3| image:: https://img.shields.io/badge/github-calyx--servicios%2Fcalyx-lightgray.png?logo=github
-    :target: https://github.com/calyx-servicios/calyx.git
-    :alt: calyx-servicios/calyx.git
+.. |badge3| image:: https://img.shields.io/badge/github-calyx--servicios%2Fglb-lightgray.png?logo=github
+    :target: https://github.com/calyx-servicios/glb.git
+    :alt: calyx-servicios/glb.git
 
 |badge1| |badge2| |badge3|
-
-.. !!! Description must be max 2-3 paragraphs, and is required.
-
-This module extends the functionality of ... to support ... and to allow you to ...
-
-**Table of contents**
-
-.. contents::
-   :local:
-
-.. !!! Instalation: must only be present if there are very specific installation instructions, such as installing non-python dependencies.The audience is systems administrators. ] To install this module, you need to: !!!
 
 Install
 =======
 
-Do this ...
+* Go to applications
 
-.. !!! Configuration: This file is optional, it should explain how to configure the module before using it; it is aimed at advanced users. To configure this module, you need to:
+* Find module "crm_invoicing_goal_liters"
 
-Configure
-=========
+* Press Install
 
-Go to ...
+* Go to CRM > and see the modifications
 
-Usage
-=====
-
-1. Go to ...
 
 Known issues / Roadmap
 ======================
@@ -70,12 +53,9 @@ Authors
 Contributors
 ~~~~~~~~~~~~
 
-* `Calyx Servicios S.A. <https://odoo.calyx-cloud.com.ar/>`_
+* `Calyx Servicios S.A. <http://www.calyxservicios.com.ar/>`_
   
-  * Federico Gregori
-  * Cristian Paradiso
-  * Gabriela Perez
-  * Marco Oegg
+  * Deyker Gil
 
 Maintainers
 ~~~~~~~~~~~
@@ -83,10 +63,10 @@ Maintainers
 This module is maintained by the Calyx Servicios S.A.
 
 .. image:: https://ss-static-01.esmsv.com/id/13290/galeriaimagenes/obtenerimagen/?width=120&height=40&id=sitio_logo&ultimaModificacion=2020-05-25+21%3A45%3A05
-   :alt: Calyx Servicios S.A.
-   :target: https://odoo.calyx-cloud.com.ar/
+   :alt: Odoo Calyx Servicios S.A.
+   :target: http://www.calyxservicios.com.ar/
 
-CALYX SERVICIOS S.A. is part of the PGK Consultores economic group, member of an important global network, a world organization.
-The PGK Consultores group is one of the 20 largest consultant-studios in Argentina with nearly 300 professionals.
+CALYX SERVICIOS S.A. It is part of the PGK Consultores economic group, member of an important global network, a world organization positioned among the 20 largest consultant-studios in the world.
+The PGK Consultores group is one of the 20 largest consultant-studios in Argentina with nearly 200 professionals.
 
-This module is part of the `Calyx <https://github.com/calyx-servicios/calyx.git>`_ project on GitHub.
+This module is part of the `GLB <https://github.com/calyx-servicios/glb>`_ project on Github.
