@@ -14,7 +14,6 @@ class CrmTeam(models.Model):
                 values.append(member[0].current_liters)
                 
         self.current_liters = sum(values)
-        
 
-    current_liters = fields.Integer(_("Current Liters"), compute=_compute_current_liters_for_team)
+    current_liters = fields.Integer("Current Liters", compute=_compute_current_liters_for_team)
 

@@ -15,5 +15,5 @@ class ResUsers(models.Model):
 
         self.current_liters = sum(values)
     
-    current_liters = fields.Float(_("Current Liters"),compute=_compute_current_liters) #Litros actuales
-    planned_liters = fields.Float(_("Planned Liters")) #Litros planificados
+    current_liters = fields.Float("Current Liters",compute=_compute_current_liters)
+    planned_liters = fields.Float("Planned Liters")
