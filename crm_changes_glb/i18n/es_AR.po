@@ -1,0 +1,46 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* crm_changes_glb
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-30 16:04+0000\n"
+"PO-Revision-Date: 2022-05-30 16:04+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: crm_changes_glb
+#: code:addons/crm_changes_glb/models/crm_lead.py:0
+#: code:addons/custom-addons/calyx-servicios/glb/crm_changes_glb/models/crm_lead.py:0
+#: model:ir.model.fields,field_description:crm_changes_glb.field_crm_lead__estimated_sale_liters
+#, python-format
+msgid "Estimated sale in liters"
+msgstr "Venta estimada en litros"
+
+#. module: crm_changes_glb
+#: code:addons/crm_changes_glb/models/crm_lead.py:0
+#: code:addons/custom-addons/calyx-servicios/glb/crm_changes_glb/models/crm_lead.py:0
+#, python-format
+msgid "Field Estimated sale in liters must be an integer."
+msgstr "El campo Venta estimada en litros debe ser un número."
+
+#. module: crm_changes_glb
+#: model_terms:ir.ui.view,arch_db:crm_changes_glb.view_order_form_changes_glb
+msgid "Invoicing"
+msgstr "Facturación"
+
+#. module: crm_changes_glb
+#: model:ir.model,name:crm_changes_glb.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "Iniciativa/Oportunidad"
+
+#. module: crm_changes_glb
+#: model_terms:ir.ui.view,arch_db:crm_changes_glb.view_order_form_changes_glb
+msgid "Reporting"
+msgstr "Informes"
