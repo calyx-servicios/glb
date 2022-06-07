@@ -1,7 +1,6 @@
 <?xml version="1.0"?>
 
 <odoo>
-	
   <record id="crm_lead_lost_custom_wizard" model="ir.ui.view">
 		<field name="name">crm.lead.lost.custom.wizard</field>
 		<field name="model">crm.lead.lost</field>
@@ -12,5 +11,4 @@
 			</xpath>
 		</field>
 	</record>
-
 </odoo>

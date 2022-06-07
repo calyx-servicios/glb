@@ -1,5 +1,4 @@
 from odoo import api, fields, models, _
-
 class Lead(models.Model):
     _inherit = "crm.lead"
     
