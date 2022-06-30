@@ -3,7 +3,7 @@
 <odoo noupdate="1">
 
     <record forcecreate="True" id="oilnet_invoice_sync" model="ir.cron">
-        <field name="name">Daily Invoice Oilnet Sync</field>
+        <field name="name">Daily Oilnet Sync</field>
         <field name="interval_number">1</field>
         <field name="interval_type">days</field>
         <field name="nextcall" eval="(DateTime.now() + timedelta(days=1)).strftime('%Y-%m-%d 01:00:00')"/>
@@ -11,7 +11,7 @@
         <field name="doall">False</field>
         <field name="active">True</field>
         <field name="priority">1</field>
-        <field name="model_id" ref="model_account_move"/>
+        <field name="model_id" ref="model_sale_order"/>
         <field name="state">code</field>
         <field name="code">model.cron_update_notes_status()</field>
     </record>
