@@ -12,8 +12,10 @@
     'depends': ['base', 'sale','account'],
     'data': [
         'data/ir_cron.xml',
-        'views/account_move_views.xml',
         'views/product_template_views.xml',
         'views/res_company_views.xml',
+        'views/res_partner_views.xml',
+        'views/sale_order_views.xml',
+
     ],
 }
