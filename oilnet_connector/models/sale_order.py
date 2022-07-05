@@ -75,7 +75,7 @@ class SaleOrder(models.Model):
             verify=False,
         )
         if r.status_code == 200:
-            self.oilnet_id = r.text
+            self.oilnet_id = int(r.text('"',''))
         else:
             raise Warning(r.text +_(" with status code ")+ str(r.status_code))
 
