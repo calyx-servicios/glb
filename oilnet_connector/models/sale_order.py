@@ -2,6 +2,8 @@ from odoo import models, fields, _
 from requests.models import Response
 import requests
 from odoo.exceptions import Warning
+import logging
+_logger = logging.getLogger(__name__)
 
 class SaleOrder(models.Model):
     _inherit = "sale.order"
@@ -89,17 +91,18 @@ class SaleOrder(models.Model):
         auth = self.env.company.oilnet_login()
         base_url = self.env.company.oilnet_url
         for order in sale_orders:
-            url = base_url + "/Api/Cuenta/?numero=" + str(order.oilnet_id)
-        r = requests.get(
-            url,
-            headers={"Authorization":auth ,"Content-Type": "application/json"},
-            verify=False,
-        )
-        if r.status_code == 200:
-            status = eval(r.text.replace("true","True").replace("false","False"))
-            if status.get("auto_financiera",False) and not status.get("auto_logistica",False):
-                self.write({"state":"financial_auth"})
-            if status.get("auto_logistica",False) and status.get("auto_financiera",False):
-                self.write({"state":"logistics_auth"})
-        else:
-            raise Warning(_('Something went wrong this is what we got, status code: ') + str(r.status_code))
+            url = base_url + "/Api/NotaPedido/?numero=" + str(order.oilnet_id)
+            r = requests.get(
+               url,
+               headers={"Authorization":auth ,"Content-Type": "application/json"},
+               verify=False)
+            if r.status_code == 200:
+                status = eval(r.text.replace("true","True").replace("false","False").replace("null","False"))
+                if status.get("auto_financiera",True) and status.get("auto_logistica",False):
+                    self.write({"state":"financial_auth"})
+                if status.get("auto_financiera",True) and status.get("auto_logistica",True):
+                    order.write({"state":"logistics_auth"})
+            else:
+                _logger.info("Oilnet id: " + str(order.oilnet_id))
+                _logger.info("Order id: " + str(order.id))
+                _logger.info(_('Something went wrong this is what we got, status code: ') + str(r.status_code))
