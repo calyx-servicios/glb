@@ -11,6 +11,10 @@
         <field name="current_liters" />
       </xpath>
 
+      <xpath expr="//field[@name='invoiced_target']" position="attributes">
+        <attribute name="invisible">True</attribute>
+      </xpath>
+      
     </field>
   </record>
 </odoo>

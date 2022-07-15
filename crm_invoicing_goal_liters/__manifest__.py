@@ -24,6 +24,8 @@
 
     # always loaded
     'data': [
+        'data/ir_cron.xml',
+        'security/ir.model.access.csv',
         'views/crm_team_views.xml',
         'views/res_users_views.xml'
     ]
