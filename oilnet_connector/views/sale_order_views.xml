@@ -1,29 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <record id="view_order_form_oilnet" model="ir.ui.view">
-        <field name="name">sale.order.form</field>
-        <field name="model">sale.order</field>
-        <field name="inherit_id" ref="sale.view_order_form"/>
-        <field name="arch" type="xml">
+  <record id="view_order_form_oilnet" model="ir.ui.view">
+    <field name="name">sale.order.form</field>
+    <field name="model">sale.order</field>
+    <field name="inherit_id" ref="sale.view_order_form"/>
+    <field name="arch" type="xml">
 
-            <field name="state" position="attributes">
-                <attribute name="statusbar_visible" >draft,sent,sale,financial_auth,logistics_auth</attribute>
-            </field>
-            
-            <xpath expr="//button[@name='action_confirm'][1]" position="attributes">
-                <attribute name="attrs" >{'invisible': [('state','not in',('sent'))]}</attribute>
-            </xpath>
-            
-            <xpath expr="//button[@name='action_confirm'][2]" position="attributes">
-                <attribute name="attrs" >{'invisible': True}</attribute>
-            </xpath>
+      <field name="state" position="attributes">
+        <attribute name="statusbar_visible">draft,sent,sale,financial_auth,logistics_auth,pending</attribute>
+      </field>
 
-            <xpath expr="//field[@name='partner_id']" position="after">
-                <field name="oilnet_id" />
-            </xpath>
+      <xpath expr="//button[@name='action_confirm'][1]" position="attributes">
+        <attribute name="attrs">{'invisible': [('state','not in',('sent'))]}</attribute>
+      </xpath>
 
-        </field>
-    </record>
+      <xpath expr="//button[@name='action_confirm'][2]" position="attributes">
+        <attribute name="attrs">{'invisible': True}</attribute>
+      </xpath>
+
+      <xpath expr="//field[@name='partner_id']" position="after">
+        <field name="oilnet_id" />
+      </xpath>
+
+      <xpath expr="//header/button[@name='action_cancel']" position="after">
+        <button name="action_pending" type="object" string="Go to pending" attrs="{'invisible': [('state', '=', 'pending')]}"/>
+      </xpath>
+
+      <!-- states="draft,sent,sale" -->
+    </field>
+  </record>
 
 </odoo>
