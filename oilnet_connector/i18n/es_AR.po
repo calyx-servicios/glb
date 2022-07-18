@@ -186,3 +186,13 @@ msgstr "Usuario"
 #, python-format
 msgid "Wrong Credencials "
 msgstr "Credenciales incorrectas"
+
+#. module: oilnet_connector
+#: model_terms:ir.ui.view,arch_db:oilnet_connector.view_order_form_oilnet
+msgid "Go to pending"
+msgstr "Pasar a Pendiente"
+
+#. module: oilnet_connector
+#: model:ir.model.fields.selection,name:oilnet_connector.selection__sale_order__state__pending
+msgid "Pending"
+msgstr "Pendiente"
