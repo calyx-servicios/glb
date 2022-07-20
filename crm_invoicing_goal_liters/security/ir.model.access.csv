@@ -1,2 +1,2 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_crm_team_monthtl_records,crm.team.monthtl.records,model_crm_team_monthtl_records,base.group_user,1,1,1,1
+access_crm_team_monthly_records,crm.team.monthly.records,model_crm_team_monthly_records,base.group_user,1,1,1,1

@@ -7,9 +7,12 @@ class SaleOrder(models.Model):
     _inherit = "sale.order"
  
     oilnet_id = fields.Char()
-    state = fields.Selection(selection_add=[('financial_auth','Financial Authorization'),
-                                            ('logistics_auth','Logistics Authorization'),
-                                            ('done',)])
+    state = fields.Selection(selection_add=[
+        ('pending','Pending'),
+        ('financial_auth','Financial Authorization'),
+        ('logistics_auth','Logistics Authorization'),
+        ('done',)
+    ])
 
 
     def check_partner_sinc(self):
@@ -29,6 +32,12 @@ class SaleOrder(models.Model):
                 raise Warning(partner_dict.get("resultado",False))
         else:
             raise Warning(_('Something went wrong this is what we got, status code: ') + str(r.status_code))
+    
+    def action_pending(self):
+        if self.state in ['sent']:
+            self.write({
+                'state': 'pending'
+            })
     
     def action_quotation_send(self):
         if not self.partner_id.oilnet_id:

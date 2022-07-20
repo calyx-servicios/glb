@@ -3,7 +3,7 @@ from datetime import date, datetime
 from odoo import models, fields, api
 
 class CrmTeamMonthlyRecords(models.Model):
-    _name = 'crm.team.monthtl.records'
+    _name = 'crm.team.monthly.records'
     _description = 'Monthly users record to goal invoicing'
 
     res_user_id = fields.Many2one(string='User record')

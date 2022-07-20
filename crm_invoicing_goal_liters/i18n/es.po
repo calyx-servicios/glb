@@ -40,9 +40,15 @@ msgstr "Litros"
 #: code:addons/crm_invoicing_goal_liters/models/res_users.py:0
 #: code:addons/custom-addons/calyx-servicios/glb/crm_invoicing_goal_liters/models/res_users.py:0
 #: model:ir.model.fields,field_description:crm_invoicing_goal_liters.field_res_users__planned_liters
+#: model:ir.model.fields,field_description:crm_invoicing_goal_liters.field_crm_team_monthly_records__planned_liters
 #, python-format
 msgid "Planned Liters"
 msgstr "Litros planificados"
+
+#. module: crm_invoicing_goal_liters
+#: model:ir.model.fields,field_description:crm_invoicing_goal_liters.field_crm_team_monthly_records__current_liters
+msgid "Current liters"
+msgstr "Litros Actuales"
 
 #. module: crm_invoicing_goal_liters
 #: model:ir.model,name:crm_invoicing_goal_liters.model_crm_team
@@ -53,3 +59,20 @@ msgstr "Equipo de ventas"
 #: model:ir.model,name:crm_invoicing_goal_liters.model_res_users
 msgid "Users"
 msgstr "Usuarios"
+
+#. module: crm_invoicing_goal_liters
+#: model:ir.actions.server,name:crm_invoicing_goal_liters.crm_monthly_calculation_invoicing_goals_ir_actions_server
+#: model:ir.cron,cron_name:crm_invoicing_goal_liters.crm_monthly_calculation_invoicing_goals
+#: model:ir.cron,name:crm_invoicing_goal_liters.crm_monthly_calculation_invoicing_goals
+msgid "Monthly calculation by GLB invoicing goals"
+msgstr "Càlculo mensual de Metas de facturación GLB"
+
+#. module: crm_invoicing_goal_liters
+#: model:ir.model.fields,field_description:crm_invoicing_goal_liters.field_res_users__monthly_records_ids
+msgid "Monthly records"
+msgstr "Registros mensuales"
+
+#. module: crm_invoicing_goal_liters
+#: model:ir.model.fields,field_description:crm_invoicing_goal_liters.field_crm_team_monthtl_records__registered_month
+msgid "Month"
+msgstr "Mes"
