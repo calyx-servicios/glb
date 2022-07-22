@@ -34,7 +34,7 @@ class SaleOrder(models.Model):
             raise Warning(_('Something went wrong this is what we got, status code: ') + str(r.status_code))
     
     def action_pending(self):
-        if self.state in ['sent']:
+        if self.state not in ['pending']:
             self.write({
                 'state': 'pending'
             })
