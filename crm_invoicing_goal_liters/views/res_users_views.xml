@@ -11,7 +11,7 @@
       <xpath expr="//field[@name='company_id']" position="after">
         <group name="name" string="Liters">
           <field name="planned_liters"/>
-          <field name="current_liters" invisible="1"/>
+          <field name="current_liters" />
         </group>
       </xpath>
 
