@@ -94,21 +94,24 @@ class SaleOrder(models.Model):
         return confirm 
 
     def cron_update_notes_status(self):
-        sale_orders = self.env['sale.order'].search([('oilnet_id','!=',""),'|',('state','=','financial_auth'),('state','=','sale')])
+        sale_orders = self.env['sale.order'].search([('oilnet_id','!=',""),'|','|',('state','=','pending'),('state','=','financial_auth'),('state','=','sale')])
         auth = self.env.company.oilnet_login()
         base_url = self.env.company.oilnet_url
         for order in sale_orders:
-            url = base_url + "/Api/Cuenta/?numero=" + str(order.oilnet_id)
-        r = requests.get(
-            url,
-            headers={"Authorization":auth ,"Content-Type": "application/json"},
-            verify=False,
-        )
-        if r.status_code == 200:
-            status = eval(r.text.replace("true","True").replace("false","False"))
-            if status.get("auto_financiera",False) and not status.get("auto_logistica",False):
-                self.write({"state":"financial_auth"})
-            if status.get("auto_logistica",False) and status.get("auto_financiera",False):
-                self.write({"state":"logistics_auth"})
-        else:
-            raise Warning(_('Something went wrong this is what we got, status code: ') + str(r.status_code))
+            url = base_url + "/Api/NotaPedido/?numero=" + str(order.oilnet_id)
+            r = requests.get(
+                url,
+                headers={"Authorization":auth ,"Content-Type": "application/json"},
+                verify=False,
+            )
+            if r.status_code == 200:
+                status = eval(r.text.replace("true","True").replace("false","False").replace("null","False"))
+                if status.get("np_numero",-1) == -1:
+                    order.write({"state":"cancel"})
+                else:
+                    if status.get("auto_financiera",False) and not status.get("auto_logistica",False):
+                        order.write({"state":"financial_auth"})
+                    if status.get("auto_logistica",False) and status.get("auto_financiera",False):
+                        order.write({"state":"logistics_auth"})
+            else:
+                raise Warning(_('Something went wrong this is what we got, status code: ') + str(r.status_code))
