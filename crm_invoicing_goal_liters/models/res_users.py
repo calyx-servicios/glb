@@ -19,18 +19,18 @@ class ResUsers(models.Model):
     
     current_liters = fields.Float("Current Liters",compute=_compute_current_liters)
     planned_liters = fields.Float("Planned Liters")
-    monthly_records_ids = fields.One2many('crm.team.monthly.records', 'res_user_id', 'Monthly records')
+    user_monthly_records_ids = fields.One2many('res.users.monthly.records', 'res_user_id', 'Monthly records')
     
     def cron_monthly_calculation_ig(self):
         records = self.env['res.users'].search([])
-        monthly_records_model = self.env['crm.team.monthly.records']
+        user_monthly_model = self.env['res.users.monthly.records']
         ids = [] 
         date = datetime.datetime.now() + dateutil.relativedelta.relativedelta(months=-1)
 
         for user in records:
             user._compute_current_liters()
             if not user.id in ids:
-                monthly_records_model.create({
+                user_monthly_model.create({
                     'registered_month': date ,
                     'res_user_id': user.id,
                     'planned_liters' : user.planned_liters,
