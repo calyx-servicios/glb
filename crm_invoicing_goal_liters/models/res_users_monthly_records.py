@@ -1,11 +1,11 @@
 from datetime import date, datetime
 from odoo import models, fields
 
-class CrmTeamMonthlyRecords(models.Model):
-    _name = 'crm.team.monthly.records'
-    _description = 'Monthly team record to goal invoicing for GLB'
+class ResUsersMonthlyRecords(models.Model):
+    _name = 'res.users.monthly.records'
+    _description = 'Monthly users record to goal invoicing'
 
-    team_id = fields.Many2one(string='Team')
+    res_user_id = fields.Many2one(string='User record')
     
     registered_month = fields.Date(
         string='Month'

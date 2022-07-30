@@ -11,7 +11,7 @@
       <xpath expr="//field[@name='company_id']" position="after">
         <group name="name" string="Liters">
           <field name="planned_liters"/>
-          <field name="current_liters" />
+          <field name="current_liters"/>
         </group>
       </xpath>
 
@@ -32,7 +32,7 @@
           </group>
 
           <group name="monthly_records">
-            <field name="monthly_records_ids" readonly="1" editable="bottom">
+            <field name="user_monthly_records_ids" readonly="1" editable="bottom">
               <tree create="false" delete="false" edit="false" editable="bottom">
                 <field name="res_user_id" invisible="1" />
                 <field name="registered_month"/>
