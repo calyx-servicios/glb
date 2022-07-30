@@ -37,7 +37,8 @@ class ResUsers(models.Model):
                     'current_liters' : user.current_liters
                 })
                 user.write({
-                    'planned_liters' : 0
+                    'planned_liters' : 0,
+                    'current_liters' : 0,
                 })
 
                 ids.append(user.id)
