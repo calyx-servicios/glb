@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 13.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-31 18:52+0000\n"
-"PO-Revision-Date: 2022-05-31 18:52+0000\n"
+"POT-Creation-Date: 2022-07-30 17:53+0000\n"
+"PO-Revision-Date: 2022-07-30 17:53+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -16,15 +16,36 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: crm_invoicing_goal_liters
+#: model:ir.model.fields,field_description:crm_invoicing_goal_liters.field_crm_team_monthly_records__create_uid
+#: model:ir.model.fields,field_description:crm_invoicing_goal_liters.field_res_users_monthly_records__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: crm_invoicing_goal_liters
+#: model:ir.model.fields,field_description:crm_invoicing_goal_liters.field_crm_team_monthly_records__create_date
+#: model:ir.model.fields,field_description:crm_invoicing_goal_liters.field_res_users_monthly_records__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: crm_invoicing_goal_liters
 #: code:addons/crm_invoicing_goal_liters/models/crm_team.py:0
-#: code:addons/crm_invoicing_goal_liters/models/res_users.py:0
 #: code:addons/custom-addons/calyx-servicios/glb/crm_invoicing_goal_liters/models/crm_team.py:0
-#: code:addons/custom-addons/calyx-servicios/glb/crm_invoicing_goal_liters/models/res_users.py:0
-#: model:ir.model.fields,field_description:crm_invoicing_goal_liters.field_crm_team__current_liters
 #: model:ir.model.fields,field_description:crm_invoicing_goal_liters.field_res_users__current_liters
 #, python-format
 msgid "Current Liters"
-msgstr "Litros actuales"
+msgstr "Litros Reales"
+
+#. module: crm_invoicing_goal_liters
+#: model:ir.model.fields,field_description:crm_invoicing_goal_liters.field_crm_team_monthly_records__current_liters
+#: model:ir.model.fields,field_description:crm_invoicing_goal_liters.field_res_users_monthly_records__current_liters
+msgid "Current liters"
+msgstr "Litros Reales"
+
+#. module: crm_invoicing_goal_liters
+#: model:ir.model.fields,field_description:crm_invoicing_goal_liters.field_crm_team_monthly_records__display_name
+#: model:ir.model.fields,field_description:crm_invoicing_goal_liters.field_res_users_monthly_records__display_name
+msgid "Display Name"
+msgstr ""
 
 #. module: crm_invoicing_goal_liters
 #: model_terms:ir.ui.view,arch_db:crm_invoicing_goal_liters.inherit_base_view_users_form_two
@@ -32,23 +53,85 @@ msgid "Goals invoicing"
 msgstr "Metas de facturación"
 
 #. module: crm_invoicing_goal_liters
+#: model:ir.model.fields,field_description:crm_invoicing_goal_liters.field_crm_team_monthly_records__id
+#: model:ir.model.fields,field_description:crm_invoicing_goal_liters.field_res_users_monthly_records__id
+msgid "ID"
+msgstr ""
+
+#. module: crm_invoicing_goal_liters
+#: model:ir.model.fields,field_description:crm_invoicing_goal_liters.field_crm_team_monthly_records____last_update
+#: model:ir.model.fields,field_description:crm_invoicing_goal_liters.field_res_users_monthly_records____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: crm_invoicing_goal_liters
+#: model:ir.model.fields,field_description:crm_invoicing_goal_liters.field_crm_team_monthly_records__write_uid
+#: model:ir.model.fields,field_description:crm_invoicing_goal_liters.field_res_users_monthly_records__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: crm_invoicing_goal_liters
+#: model:ir.model.fields,field_description:crm_invoicing_goal_liters.field_crm_team_monthly_records__write_date
+#: model:ir.model.fields,field_description:crm_invoicing_goal_liters.field_res_users_monthly_records__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: crm_invoicing_goal_liters
 #: model_terms:ir.ui.view,arch_db:crm_invoicing_goal_liters.inherit_base_view_users_simple_form
 msgid "Liters"
 msgstr "Litros"
 
 #. module: crm_invoicing_goal_liters
-#: code:addons/crm_invoicing_goal_liters/models/res_users.py:0
-#: code:addons/custom-addons/calyx-servicios/glb/crm_invoicing_goal_liters/models/res_users.py:0
-#: model:ir.model.fields,field_description:crm_invoicing_goal_liters.field_res_users__planned_liters
-#: model:ir.model.fields,field_description:crm_invoicing_goal_liters.field_crm_team_monthly_records__planned_liters
-#, python-format
-msgid "Planned Liters"
-msgstr "Litros planificados"
+#: model:ir.model.fields,field_description:crm_invoicing_goal_liters.field_crm_team__current_liters
+msgid "Litros actuales"
+msgstr "Litros reales"
 
 #. module: crm_invoicing_goal_liters
-#: model:ir.model.fields,field_description:crm_invoicing_goal_liters.field_crm_team_monthly_records__current_liters
-msgid "Current liters"
-msgstr "Litros Actuales"
+#: model:ir.model.fields,field_description:crm_invoicing_goal_liters.field_crm_team_monthly_records__registered_month
+#: model:ir.model.fields,field_description:crm_invoicing_goal_liters.field_res_users_monthly_records__registered_month
+msgid "Month"
+msgstr "Mes"
+
+#. module: crm_invoicing_goal_liters
+#: model:ir.actions.server,name:crm_invoicing_goal_liters.crm_monthly_calculation_invoicing_goals_ir_actions_server
+#: model:ir.cron,cron_name:crm_invoicing_goal_liters.crm_monthly_calculation_invoicing_goals
+#: model:ir.cron,name:crm_invoicing_goal_liters.crm_monthly_calculation_invoicing_goals
+msgid "Monthly calculation by GLB invoicing goals"
+msgstr "Calculo mensual de Metas de facturación GLB"
+
+#. module: crm_invoicing_goal_liters
+#: model:ir.actions.server,name:crm_invoicing_goal_liters.crm_monthly_calculation_invoicing_goals_team_ir_actions_server
+#: model:ir.cron,cron_name:crm_invoicing_goal_liters.crm_monthly_calculation_invoicing_goals_team
+#: model:ir.cron,name:crm_invoicing_goal_liters.crm_monthly_calculation_invoicing_goals_team
+msgid "Monthly calculation goals of sales team"
+msgstr "Calculo mensual de metas para equipo de ventas"
+
+#. module: crm_invoicing_goal_liters
+#: model:ir.model.fields,field_description:crm_invoicing_goal_liters.field_res_users__user_monthly_records_ids
+msgid "Monthly records"
+msgstr "Registros mensuales"
+
+#. module: crm_invoicing_goal_liters
+#: model:ir.model.fields,field_description:crm_invoicing_goal_liters.field_crm_team__team_monthly_records_ids
+msgid "Monthly records for sales team"
+msgstr "Registros mensuales"
+
+#. module: crm_invoicing_goal_liters
+#: model:ir.model,name:crm_invoicing_goal_liters.model_crm_team_monthly_records
+msgid "Monthly team record to goal invoicing for GLB"
+msgstr "Registro mensual de equipo de ventas GLB"
+
+#. module: crm_invoicing_goal_liters
+#: model:ir.model,name:crm_invoicing_goal_liters.model_res_users_monthly_records
+msgid "Monthly users record to goal invoicing"
+msgstr "Registro ensual de usuarios para metas de Facturación"
+
+#. module: crm_invoicing_goal_liters
+#: model:ir.model.fields,field_description:crm_invoicing_goal_liters.field_crm_team_monthly_records__planned_liters
+#: model:ir.model.fields,field_description:crm_invoicing_goal_liters.field_res_users__planned_liters
+#: model:ir.model.fields,field_description:crm_invoicing_goal_liters.field_res_users_monthly_records__planned_liters
+msgid "Planned Liters"
+msgstr "Litros planificados"
 
 #. module: crm_invoicing_goal_liters
 #: model:ir.model,name:crm_invoicing_goal_liters.model_crm_team
@@ -56,23 +139,21 @@ msgid "Sales Team"
 msgstr "Equipo de ventas"
 
 #. module: crm_invoicing_goal_liters
+#: model:ir.model.fields,field_description:crm_invoicing_goal_liters.field_crm_team_monthly_records__team_id
+msgid "Team"
+msgstr "Equipo"
+
+#. module: crm_invoicing_goal_liters
+#: model_terms:ir.ui.view,arch_db:crm_invoicing_goal_liters.view_crm_team_form_goal_monthly
+msgid "Team monthly goals"
+msgstr "Metas mensuales por equipo"
+
+#. module: crm_invoicing_goal_liters
+#: model:ir.model.fields,field_description:crm_invoicing_goal_liters.field_res_users_monthly_records__res_user_id
+msgid "User record"
+msgstr "usuario"
+
+#. module: crm_invoicing_goal_liters
 #: model:ir.model,name:crm_invoicing_goal_liters.model_res_users
 msgid "Users"
 msgstr "Usuarios"
-
-#. module: crm_invoicing_goal_liters
-#: model:ir.actions.server,name:crm_invoicing_goal_liters.crm_monthly_calculation_invoicing_goals_ir_actions_server
-#: model:ir.cron,cron_name:crm_invoicing_goal_liters.crm_monthly_calculation_invoicing_goals
-#: model:ir.cron,name:crm_invoicing_goal_liters.crm_monthly_calculation_invoicing_goals
-msgid "Monthly calculation by GLB invoicing goals"
-msgstr "Càlculo mensual de Metas de facturación GLB"
-
-#. module: crm_invoicing_goal_liters
-#: model:ir.model.fields,field_description:crm_invoicing_goal_liters.field_res_users__monthly_records_ids
-msgid "Monthly records"
-msgstr "Registros mensuales"
-
-#. module: crm_invoicing_goal_liters
-#: model:ir.model.fields,field_description:crm_invoicing_goal_liters.field_crm_team_monthtl_records__registered_month
-msgid "Month"
-msgstr "Mes"
