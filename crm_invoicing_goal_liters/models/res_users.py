@@ -9,7 +9,7 @@ class ResUsers(models.Model):
     """ Bring liters of sales orders that are of the "Fuel" category and belong to the team member. """
     def _compute_current_liters(self):
         values = []
-        sale_orders = self.env['sale.order'].search([('user_id','=', self.id), ('order_line.product_id.categ_id.name', '=', 'Combustibles')])
+        sale_orders = self.env['sale.order'].search([('user_id','=', self.id), ('order_line.product_id.categ_id.name', '=', 'Combustibles'), ('state', '=', 'logistics_auth')])
 
         for so in sale_orders:
             for line in so.order_line:

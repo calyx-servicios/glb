@@ -38,6 +38,11 @@ class SaleOrder(models.Model):
             self.write({
                 'state': 'pending'
             })
+            
+    def action_logistics_auth(self):
+            self.write({
+                'state': 'logistics_auth'
+            })
     
     def action_quotation_send(self):
         if not self.partner_id.oilnet_id:
