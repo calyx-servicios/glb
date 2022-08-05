@@ -1,6 +1,7 @@
+import requests
+import datetime
 from odoo import models, fields, _
 from requests.models import Response
-import requests
 from odoo.exceptions import Warning
 
 class SaleOrder(models.Model):
@@ -117,6 +118,6 @@ class SaleOrder(models.Model):
                     if status.get("auto_financiera",False) and not status.get("auto_logistica",False):
                         order.write({"state":"financial_auth"})
                     if status.get("auto_logistica",False) and status.get("auto_financiera",False):
-                        order.write({"state":"logistics_auth"})
+                        order.write({"state":"logistics_auth", "authorized_date": datetime.now()})
             else:
                 raise Warning(_('Something went wrong this is what we got, status code: ') + str(r.status_code))
