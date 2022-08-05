@@ -71,7 +71,8 @@ class SaleOrder(models.Model):
             note['fecha'] = self.date_order.strftime("%Y-%m-%dT%H:%M:%S")
         if self.commitment_date:
             note['fechaEntrega'] = self.commitment_date.strftime("%Y-%m-%dT%H:%M:%S")
-        note['domicilioEntrega'] = self.partner_id.street
+        if self.partner_id.street:
+            note['domicilioEntrega'] = self.partner_id.street
         if self.payment_term_id:
             note['formaPago'] = self.payment_term_id.name
         note['items'] = self.prepare_note_line()
@@ -79,7 +80,7 @@ class SaleOrder(models.Model):
 
     def send_note(self):
         data = self.prepare_note()
-        auth = self.env.company.oilnet_login()
+        auth = self.env.company.sudo().oilnet_login()
         url = self.env.company.oilnet_url
         url = url + "/Api/NotaPedido"
         r = requests.post(
