@@ -42,10 +42,11 @@ class ResUsers(models.Model):
         date = datetime.datetime.now() + dateutil.relativedelta.relativedelta(months=-1)
         records = self.env['res.users'].search([])
         user_monthly_model = self.env['res.users.monthly.records']
+        month_date = self.env['res.users'].get_month_to_date(date)
 
         for user in records:
             user_monthly_model.create({
-                'registered_month': user.get_month_to_date(date) ,
+                'registered_month': month_date ,
                 'res_user_id': user.id,
                 'planned_liters' : user.planned_liters,
                 'current_liters' : user.get_sum_values(date, user)
