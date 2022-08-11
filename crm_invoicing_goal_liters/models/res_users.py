@@ -55,7 +55,7 @@ class ResUsers(models.Model):
                 'planned_liters' : 0,
             })
 
-    def get_month_to_date(date_period):
+    def get_month_to_date(self, date_period):
         dict_month = {
             "1": _("January"), "2": _("February"), "3": _("March"), 
             "4": _("April"), "5": _("May"), "6": _("June"),
