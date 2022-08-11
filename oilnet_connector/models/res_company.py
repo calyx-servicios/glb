@@ -24,8 +24,7 @@ class ResCompany(models.Model):
             data=data
         )
         if r.status_code == 200:
-            self.oilnet_auth = eval(r.text).get("token",False)
-            self.oilnet_login = True
-            return self.oilnet_auth
+            oilnet_auth = eval(r.text).get("token",False)
+            return oilnet_auth
         else:
             raise Warning(_('Wrong Credencials ') + str(r.status_code))
