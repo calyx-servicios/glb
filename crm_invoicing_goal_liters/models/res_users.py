@@ -16,7 +16,7 @@ class ResUsers(models.Model):
     planned_liters = fields.Float("Planned Liters")
     user_monthly_records_ids = fields.One2many('res.users.monthly.records', 'res_user_id', 'Monthly records')
 
-    def last_day_of_month(any_day):
+    def last_day_of_month(self, any_day):
         next_month = any_day.replace(day=28) + datetime.timedelta(days=4)
         return next_month - datetime.timedelta(days=next_month.day)  
 
