@@ -7,7 +7,7 @@ class ResUsersMonthlyRecords(models.Model):
 
     res_user_id = fields.Many2one(string='User record')
     
-    registered_month = fields.Date(
+    registered_month = fields.Char(
         string='Month'
     )
     
