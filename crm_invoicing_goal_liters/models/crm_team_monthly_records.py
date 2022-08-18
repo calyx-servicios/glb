@@ -7,7 +7,7 @@ class CrmTeamMonthlyRecords(models.Model):
 
     team_id = fields.Many2one(string='Team')
     
-    registered_month = fields.Date(
+    registered_month = fields.Char(
         string='Month'
     )
     
