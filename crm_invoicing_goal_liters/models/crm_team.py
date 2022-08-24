@@ -27,7 +27,7 @@ class CrmTeam(models.Model):
             total_current_ltr = []
 
             for user in team.member_ids:
-                team_current_liters = self.env['res.users.monthly.records'].search([('registered_month','=', month_date) ,('user_id', '=', user.id)])
+                team_current_liters = self.env['res.users.monthly.records'].search([('registered_month','=', month_date) ,('res_user_id', '=', user.id)])
                 total_planned_ltr.append(user.planned_liters)
                 total_current_ltr.append(team_current_liters.current_liters)
                 
