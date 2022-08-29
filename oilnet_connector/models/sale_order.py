@@ -41,9 +41,14 @@ class SaleOrder(models.Model):
             })
             
     def action_logistics_auth(self):
-            self.write({
-                'state': 'logistics_auth'
-            })
+        self.write({
+            'state': 'logistics_auth'
+        })
+    
+    def action_financial_auth(self):
+        self.write({
+            'state': 'financial_auth'
+        })
     
     def action_quotation_send(self):
         if not self.partner_id.oilnet_id:
@@ -117,8 +122,11 @@ class SaleOrder(models.Model):
                     order.write({"state":"cancel"})
                 else:
                     if status.get("auto_financiera",False) and not status.get("auto_logistica",False):
-                        order.write({"state":"financial_auth"})
+                        order.action_financial_auth()
+                        #order.write({"state":"financial_auth"})
                     if status.get("auto_logistica",False) and status.get("auto_financiera",False):
-                        order.write({"state":"logistics_auth", "authorized_date": datetime.now()})
+                        order.action_logistics_auth()
+                        #order.write({"state":"logistics_auth", "authorized_date": datetime.now()})
             else:
                 raise Warning(_('Something went wrong this is what we got, status code: ') + str(r.status_code))
+
