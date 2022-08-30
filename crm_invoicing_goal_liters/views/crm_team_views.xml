@@ -1,61 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-
-  <record id="view_crm_team_form_inherit" model="ir.ui.view">
-    <field name="name">crm.team.view.inherit</field>
-    <field name="model">crm.team</field>
-    <field name="inherit_id" ref="sale.crm_team_salesteams_view_form"/>
-    <field name="arch" type="xml">
-
-      <xpath expr="//field[@name='invoiced_target']" position="after">
-        <field name="current_liters" />
-      </xpath>
-
-      <xpath expr="//field[@name='invoiced_target']" position="attributes">
-        <attribute name="invisible">True</attribute>
-      </xpath>
-
-    </field>
-  </record>
-
-  <record id="view_crm_team_form_goal_monthly" model="ir.ui.view">
-    <field name="name">crm.team.view.add.goal.team</field>
-    <field name="model">crm.team</field>
-    <field name="inherit_id" ref="sales_team.crm_team_view_form"/>
-    <field name="arch" type="xml">
-
-      <xpath expr="//notebook/page[@name='members']" position="after">
-        <page name="team_monthly_records_ids" string="Team monthly goals">
-          <group>
-            <field name="team_monthly_records_ids">
-              <tree create="false" delete="false" edit="false" editable="bottom">
-                <field name="team_id" invisible="1" />
-                <field name="registered_month"/>
-                <field name="planned_liters"/>
-                <field name="current_liters"/>
-              </tree>
-            </field>
-          </group>
-        </page>
-      </xpath>
-
-    </field>
-  </record>
-
+	<record id="view_crm_team_form_inherit" model="ir.ui.view">
+		<field name="name">crm.team.view.inherit</field>
+		<field name="model">crm.team</field>
+		<field name="inherit_id" ref="sale.crm_team_salesteams_view_form"/>
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='invoiced_target']" position="after">
+				<field name="current_liters"/>
+			</xpath>
+			<xpath expr="//field[@name='invoiced_target']" position="attributes">
+				<attribute name="invisible">True</attribute>
+			</xpath>
+		</field>
+	</record>
+	
+	<record id="view_crm_team_form_goal_monthly" model="ir.ui.view">
+		<field name="name">crm.team.view.add.goal.team</field>
+		<field name="model">crm.team</field>
+		<field name="inherit_id" ref="sales_team.crm_team_view_form"/>
+		<field name="arch" type="xml">
+			<xpath expr="//notebook/page[@name='members']" position="after">
+				<page name="team_monthly_records_ids" string="Team monthly goals" groups="crm_invoicing_goal_liters.group_monthly_records_views_access">
+					<group>
+						<field name="team_monthly_records_ids">
+							<tree create="false" delete="false" edit="false" editable="bottom">
+								<field name="team_id" invisible="1"/>
+								<field name="registered_month"/>
+								<field name="planned_liters"/>
+								<field name="current_liters"/>
+							</tree>
+						</field>
+					</group>
+				</page>
+			</xpath>
+		</field>
+	</record>
 </odoo>
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+

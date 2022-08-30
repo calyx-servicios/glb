@@ -2,9 +2,10 @@
 CRM Invoicing Goal Liters
 =========================
 
-.. !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-   !! Module for managing and registering goals for GLB invoicing !!
-   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+.. !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+   !! Module for managing and registering goals               !!
+   !! for GLB invoicing                                       !!
+   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 
 .. User https://shields.io for badge creation.
@@ -25,9 +26,7 @@ Install
 
 * Go to applications
 
-* Find module "crm_invoicing_goal_liters"
-
-* Press Install
+* Find module "crm_invoicing_goal_liters" > Press Install
 
 * Go to CRM > and see the modifications
 
@@ -56,6 +55,8 @@ Contributors
 * `Calyx Servicios S.A. <http://www.calyxservicios.com.ar/>`_
   
   * Deyker Gil
+  
+  * Perez Gabriela
 
 Maintainers
 ~~~~~~~~~~~
