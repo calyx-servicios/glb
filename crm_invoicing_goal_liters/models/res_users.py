@@ -1,18 +1,66 @@
-from odoo import models, fields, api, _
+from odoo import models, fields, _
+from dateutil.relativedelta import relativedelta
+from datetime import datetime, timedelta
+
 
 class ResUsers(models.Model):
     _inherit = 'res.users'
 
-    """ Bring liters of sales orders that are of the "Fuel" category and belong to the team member. """
     def _compute_current_liters(self):
+        """ Bring liters of sales orders that are of the "Fuel" category and belong to the team member. """
+        date = datetime.now() + relativedelta(months=-1)
+        for rec in self:
+            rec.current_liters = self.get_sum_values(date, rec)
+    
+    current_liters = fields.Float("Current Liters",compute=_compute_current_liters)
+    planned_liters = fields.Float("Planned Liters")
+    user_monthly_records_ids = fields.One2many('res.users.monthly.records', 'res_user_id', 'Monthly records')
+
+    def last_day_of_month(self, any_day):
+        next_month = any_day.replace(day=28) + timedelta(days=4)
+        return next_month - timedelta(days=next_month.day)  
+
+    def get_sum_values(self,date, rec):
+        last_day = self.last_day_of_month(date)
         values = []
-        sale_orders = self.env['sale.order'].search([('user_id','=', self.id), ('order_line.product_id.categ_id.name', '=', 'Combustibles')])
-        
+        domain = [
+            ('user_id','=', rec.id),
+            ('state', '=', 'logistics_auth'), 
+            ('authorized_date','>=',date.date()), 
+            ('authorized_date','<=',last_day.date())
+        ]
+        sale_orders = self.env['sale.order'].search(domain)
         for so in sale_orders:
             for line in so.order_line:
-                values.append(line.product_uom_qty)
+                if line.product_id.categ_id.name == 'Combustibles':
+                    values.append(line.product_uom_qty)
 
-        self.current_liters = sum(values)
+        return sum(values)
     
-    current_liters = fields.Float("Current Liters",compute=_compute_current_liters) 
-    planned_liters = fields.Float("Planned Liters")
+    def cron_monthly_calculation_ig(self):
+        date = datetime.now() + relativedelta(months=-1)
+        records = self.search([])
+        user_monthly_model = self.env['res.users.monthly.records']
+        month_date = self.get_month_to_date(date) + " - " + str(date.year)
+
+        for user in records:
+            user_monthly_model.create({
+                'registered_month': month_date,
+                'res_user_id': user.id,
+                'planned_liters' : user.planned_liters,
+                'current_liters' : self.get_sum_values(date, user)
+            })
+            user.write({
+                'planned_liters' : 0,
+            })
+
+    def get_month_to_date(self, date_period):
+        dict_month = {
+            "1": _("January"), "2": _("February"), "3": _("March"), 
+            "4": _("April"), "5": _("May"), "6": _("June"),
+            "7": _("July"), "8": _("August"), "9": _("September"), 
+            "10": _("October"), "11": _("November"), "12":  _("December")
+        }
+        month = dict_month[str(date_period.month)]
+        return month
+

@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_crm_team_monthly_records_base,crm.team.monthly.records.base,model_crm_team_monthly_records,base.group_user,1,0,0,0
+access_res_users_monthly_records_base,res.users.monthly.records.base,model_res_users_monthly_records,base.group_user,1,0,0,0
+access_crm_team_monthly_records,crm.team.monthly.records,model_crm_team_monthly_records,crm_invoicing_goal_liters.group_monthly_records_views_access,1,1,1,1
+access_res_users_monthly_records,res.users.monthly.records,model_res_users_monthly_records,crm_invoicing_goal_liters.group_monthly_records_views_access,1,1,1,1

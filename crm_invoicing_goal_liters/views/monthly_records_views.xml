@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="crm_team_monthly_records_form" model="ir.ui.view">
+        <field name="name">crm.team.monthly.records.form</field>
+        <field name="model">crm.team.monthly.records</field>
+        <field name="arch" type="xml">
+            <form string="Team monthly records">
+                <sheet>
+                    <group>
+	                	<field name="team_id" options="{'no_create':1}"/>
+	                	<field name="registered_month"/>
+	                	<field name="planned_liters"/>
+	                	<field name="current_liters"/>
+                    </group>
+	        	</sheet>
+            </form>
+        </field>
+    </record>
+    
+    <record id="crm_team_monthly_records_tree" model="ir.ui.view">
+        <field name="name">crm.team.monthly.records.tree</field>
+        <field name="model">crm.team.monthly.records</field>
+        <field name="arch" type="xml">
+            <tree>
+            	<field name="team_id"/>
+               	<field name="registered_month"/>
+               	<field name="planned_liters"/>
+               	<field name="current_liters"/>
+            </tree>
+        </field>
+    </record>
+	
+    <record id="action_crm_team_monthly" model="ir.actions.act_window">
+        <field name="name">Monthly Team Records</field>
+        <field name="res_model">crm.team.monthly.records</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_ids" eval="[
+            (5, 0, 0),
+            (0, 0, {'view_mode': 'tree', 'view_id': ref('crm_team_monthly_records_tree')}),
+            (0, 0, {'view_mode': 'form', 'view_id': ref('crm_team_monthly_records_form')})]"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new Monthly Team Records
+            </p>
+        </field>
+    </record>
+    
+    <record id="res_users_monthly_records_form" model="ir.ui.view">
+        <field name="name">res.users.monthly.records.form</field>
+        <field name="model">res.users.monthly.records</field>
+        <field name="arch" type="xml">
+            <form string="Users monthly records">
+                <sheet>
+                    <group>
+	                	<field name="res_user_id" options="{'no_create':1}"/>
+	                	<field name="registered_month"/>
+	                	<field name="planned_liters"/>
+	                	<field name="current_liters"/>
+                    </group>
+	        	</sheet>
+            </form>
+        </field>
+    </record>
+    
+    <record id="res_users_monthly_records_tree" model="ir.ui.view">
+        <field name="name">res.users.monthly.records.tree</field>
+        <field name="model">res.users.monthly.records</field>
+        <field name="arch" type="xml">
+            <tree>
+            	<field name="res_user_id"/>
+               	<field name="registered_month"/>
+               	<field name="planned_liters"/>
+               	<field name="current_liters"/>
+            </tree>
+        </field>
+    </record>
+	
+    <record id="action_res_users_monthly" model="ir.actions.act_window">
+        <field name="name">Res Users Records</field>
+        <field name="res_model">res.users.monthly.records</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_ids" eval="[
+            (5, 0, 0),
+            (0, 0, {'view_mode': 'tree', 'view_id': ref('res_users_monthly_records_tree')}),
+            (0, 0, {'view_mode': 'form', 'view_id': ref('res_users_monthly_records_form')})]"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new Res Users Records
+            </p>
+        </field>
+    </record>
+    
+    <menuitem action="action_crm_team_monthly" id="menu_crm_team_monthly" parent="sale.menu_sale_config" 
+    	name="Crm Team Monthly" sequence="20" 
+    	groups="crm_invoicing_goal_liters.group_monthly_records_views_access"/>
+
+    <menuitem action="action_res_users_monthly" id="menu_res_users_monthly" parent="sale.menu_sale_config" 
+    	name="Res Users Monthly" sequence="21" 
+    	groups="crm_invoicing_goal_liters.group_monthly_records_views_access"/>
+</odoo>
+
