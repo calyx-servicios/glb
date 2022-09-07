@@ -1,0 +1,198 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* oilnet_connector
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-30 17:54+0000\n"
+"PO-Revision-Date: 2022-06-30 17:54+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: oilnet_connector
+#: code:addons/oilnet_connector/models/sale_order.py:0
+#, python-format
+msgid " with status code "
+msgstr " con el codigo "
+
+#. module: oilnet_connector
+#: model_terms:ir.ui.view,arch_db:oilnet_connector.view_company_form_oilnet_credencials
+msgid "Auth"
+msgstr "Autorización"
+
+#. module: oilnet_connector
+#: model_terms:ir.ui.view,arch_db:oilnet_connector.view_move_oilnet_form
+msgid "Commercial Approved"
+msgstr "Aprobado Por Comercial"
+
+#. module: oilnet_connector
+#: model:ir.model,name:oilnet_connector.model_res_company
+msgid "Companies"
+msgstr "Compañías"
+
+#. module: oilnet_connector
+#: model:ir.model,name:oilnet_connector.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: oilnet_connector
+#: model:ir.actions.server,name:oilnet_connector.partner_email_dte_ir_actions_server
+#: model:ir.cron,cron_name:oilnet_connector.partner_email_dte
+#: model:ir.cron,name:oilnet_connector.partner_email_dte
+msgid "Daily Oilnet Sync"
+msgstr "Sincronizacion Diaria"
+
+#. module: oilnet_connector
+#: model:ir.actions.server,name:oilnet_connector.oilnet_invoice_sync_ir_actions_server
+#: model:ir.cron,cron_name:oilnet_connector.oilnet_invoice_sync
+#: model:ir.cron,name:oilnet_connector.oilnet_invoice_sync
+msgid "Daily Invoice Oilnet Sync"
+msgstr "Sincronizacion Diaria con OilNet"
+
+#. module: oilnet_connector
+#: model_terms:ir.ui.view,arch_db:oilnet_connector.view_move_oilnet_form
+msgid "Financial Approved"
+msgstr "Aprobado Por Financiera"
+
+#. module: oilnet_connector
+#: model:ir.model.fields.selection,name:oilnet_connector.selection__sale_order__state__financial_auth
+msgid "Financial Authorization"
+msgstr "Autorizado Finanzas"
+
+#. module: oilnet_connector
+#: model_terms:ir.ui.view,arch_db:oilnet_connector.product_template_oilnet_form_view
+msgid "ID in oilnet"
+msgstr "ID en OilNet"
+
+#. module: oilnet_connector
+#: model:ir.model,name:oilnet_connector.model_account_move
+msgid "Journal Entries"
+msgstr "Asientos contables"
+
+#. module: oilnet_connector
+#: model_terms:ir.ui.view,arch_db:oilnet_connector.view_company_form_oilnet_credencials
+msgid "Log in"
+msgstr "Ingresar"
+
+#. module: oilnet_connector
+#: model_terms:ir.ui.view,arch_db:oilnet_connector.view_company_form_oilnet_credencials
+msgid "Logged In"
+msgstr "Conectado"
+
+#. module: oilnet_connector
+#: model_terms:ir.ui.view,arch_db:oilnet_connector.view_move_oilnet_form
+msgid "Logistic Approved"
+msgstr "Aprobado Por Logística"
+
+#. module: oilnet_connector
+#: model:ir.model.fields.selection,name:oilnet_connector.selection__sale_order__state__logistics_auth
+msgid "Logistics Authorization"
+msgstr "Autorizado Logística"
+
+#. module: oilnet_connector
+#: model_terms:ir.ui.view,arch_db:oilnet_connector.view_move_oilnet_form
+msgid "Notes Status"
+msgstr "Estado de Notas"
+
+#. module: oilnet_connector
+#: model:ir.model.fields,field_description:oilnet_connector.field_product_product__oilnet_id
+#: model:ir.model.fields,field_description:oilnet_connector.field_product_template__oilnet_id
+#: model:ir.model.fields,field_description:oilnet_connector.field_res_partner__oilnet_id
+#: model:ir.model.fields,field_description:oilnet_connector.field_res_users__oilnet_id
+#: model:ir.model.fields,field_description:oilnet_connector.field_sale_order__oilnet_id
+msgid "Oilnet"
+msgstr "Oilnet"
+
+#. module: oilnet_connector
+#: model:ir.model.fields,field_description:oilnet_connector.field_res_company__oilnet_auth
+msgid "Oilnet Auth"
+msgstr "Autorización"
+
+#. module: oilnet_connector
+#: model_terms:ir.ui.view,arch_db:oilnet_connector.view_company_form_oilnet_credencials
+msgid "Oilnet Credencials"
+msgstr "Credenciales"
+
+#. module: oilnet_connector
+#: model_terms:ir.ui.view,arch_db:oilnet_connector.view_move_oilnet_form
+msgid "Oilnet ID"
+msgstr "ID en OilNet"
+
+#. module: oilnet_connector
+#: model:ir.model.fields,field_description:oilnet_connector.field_res_company__oilnet_logged
+msgid "Oilnet Logged"
+msgstr "Registrado en OilNet"
+
+#. module: oilnet_connector
+#: model:ir.model.fields,field_description:oilnet_connector.field_res_company__oilnet_password
+msgid "Oilnet Password"
+msgstr "Contraseña OilNet"
+
+#. module: oilnet_connector
+#: model:ir.model.fields,field_description:oilnet_connector.field_res_company__oilnet_url
+msgid "Oilnet Url"
+msgstr "Url OilNet"
+
+#. module: oilnet_connector
+#: model:ir.model.fields,field_description:oilnet_connector.field_res_company__oilnet_user
+msgid "Oilnet User"
+msgstr "Usuario OilNet"
+
+#. module: oilnet_connector
+#: model_terms:ir.ui.view,arch_db:oilnet_connector.view_company_form_oilnet_credencials
+msgid "Password"
+msgstr "Contraseña"
+
+#. module: oilnet_connector
+#: model:ir.model,name:oilnet_connector.model_product_template
+msgid "Product Template"
+msgstr "Plantilla de producto"
+
+#. module: oilnet_connector
+#: model:ir.model,name:oilnet_connector.model_sale_order
+msgid "Sales Order"
+msgstr "Pedido de venta"
+
+#. module: oilnet_connector
+#: code:addons/oilnet_connector/models/sale_order.py:0
+#: code:addons/oilnet_connector/models/sale_order.py:0
+#, python-format
+msgid "Something went wrong this is what we got, status code: "
+msgstr "Algo salió mal esto es lo que obtuvimos, código de estado: "
+
+#. module: oilnet_connector
+#: model:ir.model.fields,field_description:oilnet_connector.field_sale_order__state
+msgid "Status"
+msgstr "Estado"
+
+#. module: oilnet_connector
+#: model_terms:ir.ui.view,arch_db:oilnet_connector.view_company_form_oilnet_credencials
+msgid "Url"
+msgstr "Url"
+
+#. module: oilnet_connector
+#: model_terms:ir.ui.view,arch_db:oilnet_connector.view_company_form_oilnet_credencials
+msgid "User"
+msgstr "Usuario"
+
+#. module: oilnet_connector
+#: code:addons/oilnet_connector/models/res_company.py:0
+#, python-format
+msgid "Wrong Credencials "
+msgstr "Credenciales incorrectas"
+
+#. module: oilnet_connector
+#: model_terms:ir.ui.view,arch_db:oilnet_connector.view_order_form_oilnet
+msgid "Go to pending"
+msgstr "Pasar a Pendiente"
+
+#. module: oilnet_connector
+#: model:ir.model.fields.selection,name:oilnet_connector.selection__sale_order__state__pending
+msgid "Pending"
+msgstr "Pendiente"

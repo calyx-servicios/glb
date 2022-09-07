@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data noupdate="1">
+    <record id="crm_monthly_calculation_invoicing_goals" model="ir.cron">
+      <field name="name">Monthly calculation by GLB invoicing goals</field>
+      <field name="model_id" ref="model_res_users"/>
+      <field name="state">code</field>
+      <field name="code">model.cron_monthly_calculation_ig()</field>
+      <field name='interval_number'>1</field>
+      <field name='interval_type'>months</field>
+      <field name="numbercall">1</field>
+    </record>
+
+    <record id="crm_monthly_calculation_invoicing_goals_team" model="ir.cron">
+      <field name="name">Monthly calculation goals of sales team</field>
+      <field name="model_id" ref="model_crm_team"/>
+      <field name="state">code</field>
+      <field name="code">model.cron_monthly_calculation_ig_team()</field>
+      <field name='interval_number'>1</field>
+      <field name='interval_type'>months</field>
+      <field name="numbercall">1</field>
+    </record>
+  </data>
+</odoo>

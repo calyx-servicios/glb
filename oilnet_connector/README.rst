@@ -1,11 +1,11 @@
-=========================
-CRM Invoicing Goal Liters
-=========================
+================
+OilNet Connector
+================
 
-.. !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-   !! Module for managing and registering goals               !!
-   !! for GLB invoicing                                       !!
-   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+.. !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+   !! Syncs partners products and invoices with      !!
+   !! Oilnet Platform                                !!
+   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 
 .. User https://shields.io for badge creation.
@@ -26,9 +26,9 @@ Install
 
 * Go to applications
 
-* Find module "crm_invoicing_goal_liters" > Press Install
+* Find module "oilnet_connector"
 
-* Go to CRM > and see the modifications
+* Press Install
 
 
 Known issues / Roadmap
@@ -54,9 +54,7 @@ Contributors
 
 * `Calyx Servicios S.A. <http://www.calyxservicios.com.ar/>`_
   
-  * Deyker Gil
-  
-  * Perez Gabriela
+  * Paradiso Cristian
 
 Maintainers
 ~~~~~~~~~~~
