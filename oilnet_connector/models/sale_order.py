@@ -1,13 +1,10 @@
-import requests
-import datetime
 from odoo import models, fields, _
-from requests.models import Response
 from odoo.exceptions import Warning
 
 class SaleOrder(models.Model):
     _inherit = "sale.order"
  
-    oilnet_id = fields.Char()
+    oilnet_id = fields.Char('Oilnet Id')
     state = fields.Selection(selection_add=[
         ('pending','Pending'),
         ('financial_auth','Financial Authorization'),
@@ -15,10 +12,18 @@ class SaleOrder(models.Model):
         ('done',)
     ])
 
+    def oilnet_company(self):
+        company_name = self.company_id.name.upper() 
+        if 'GESAL' in company_name and self.partner_id.oilnet_gesal_code != 0:
+            return 'GESAL'
+        elif 'BARRANCA' in company_name and self.partner_id.oilnet_barranca_code != 0:
+            return 'BARRANCA'
+        else:
+            return True
 
-    def check_partner_sinc(self):
-        auth = self.env.company.oilnet_login()
-        url = self.env.company.oilnet_url
+    def check_partner_sinc(self, field_company):
+        auth = self.company_id.oilnet_login()
+        url = self.company_id.oilnet_url
         url = url + "/Api/Cuenta/?cuit=" + str(self.partner_id.vat)
         r = requests.get(
             url,
@@ -28,7 +33,10 @@ class SaleOrder(models.Model):
         if r.status_code == 200:
             partner_dict = eval(r.text.replace("null","False").replace("false","False"))
             if partner_dict.get("resultado","") == "":
-                self.partner_id.oilnet_id = int(partner_dict.get("cuenta",False).get("id",False))
+                if field_company == 'GESAL':
+                    self.partner_id.oilnet_gesal_code = int(partner_dict.get("cuenta",False).get("id",False))
+                elif field_company == 'BARRANCA':
+                    self.partner_id.oilnet_barranca_code = int(partner_dict.get("cuenta",False).get("id",False))
             else:
                 raise Warning(partner_dict.get("resultado",False))
         else:
@@ -51,13 +59,15 @@ class SaleOrder(models.Model):
         })
     
     def action_quotation_send(self):
-        if not self.partner_id.oilnet_id:
-            self.check_partner_sinc()
+        result = self.oilnet_company()
+        if result != True:
+            self.check_partner_sinc(result)
         return super().action_quotation_send()
 
     def action_send_whatsapp(self):
-        if not self.partner_id.oilnet_id:
-            self.check_partner_sinc()
+        result = self.oilnet_company()
+        if result != True:
+            self.check_partner_sinc(result)
         return super().action_send_whatsapp()
 
     def prepare_note_line(self):
@@ -69,10 +79,10 @@ class SaleOrder(models.Model):
                 "precio": line.price_subtotal})
         return note_lines
     
-    def prepare_note(self):
+    def prepare_note(self, oilnet_id):
         note = {}
         note['id'] = 0
-        note['cliente_id'] = int(self.partner_id.oilnet_id)
+        note['cliente_id'] = int(oilnet_id)
         if self.date_order:
             note['fecha'] = self.date_order.strftime("%Y-%m-%dT%H:%M:%S")
         if self.commitment_date:
@@ -85,9 +95,16 @@ class SaleOrder(models.Model):
         return note
 
     def send_note(self):
-        data = self.prepare_note()
-        auth = self.env.company.sudo().oilnet_login()
-        url = self.env.company.oilnet_url
+        oilnet_id = 0
+        result = self.oilnet_company()
+        if result != True:
+            if result == 'GESAL':
+                oilnet_id = self.partner_id.oilnet_gesal_code
+            else:
+                oilnet_id = self.partner_id.oilnet_barranca_code
+        data = self.prepare_note(oilnet_id)
+        auth = self.company_id.sudo().oilnet_login()
+        url = self.company_id.oilnet_url
         url = url + "/Api/NotaPedido"
         r = requests.post(
             url,
@@ -107,9 +124,9 @@ class SaleOrder(models.Model):
 
     def cron_update_notes_status(self):
         sale_orders = self.env['sale.order'].search([('oilnet_id','!=',""),'|','|',('state','=','pending'),('state','=','financial_auth'),('state','=','sale')])
-        auth = self.env.company.oilnet_login()
-        base_url = self.env.company.oilnet_url
         for order in sale_orders:
+            auth = self.company_id.oilnet_login()
+            base_url = self.company_id.oilnet_url            
             url = base_url + "/Api/NotaPedido/?numero=" + str(order.oilnet_id)
             r = requests.get(
                 url,
@@ -123,10 +140,8 @@ class SaleOrder(models.Model):
                 else:
                     if status.get("auto_financiera",False) and not status.get("auto_logistica",False):
                         order.action_financial_auth()
-                        #order.write({"state":"financial_auth"})
                     if status.get("auto_logistica",False) and status.get("auto_financiera",False):
                         order.action_logistics_auth()
-                        #order.write({"state":"logistics_auth", "authorized_date": datetime.now()})
             else:
                 raise Warning(_('Something went wrong this is what we got, status code: ') + str(r.status_code))
 
