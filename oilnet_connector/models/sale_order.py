@@ -1,5 +1,6 @@
 from odoo import models, fields, _
 from odoo.exceptions import Warning
+import requests
 
 class SaleOrder(models.Model):
     _inherit = "sale.order"
