@@ -126,8 +126,8 @@ class SaleOrder(models.Model):
     def cron_update_notes_status(self):
         sale_orders = self.env['sale.order'].search([('oilnet_id','!=',""),'|','|',('state','=','pending'),('state','=','financial_auth'),('state','=','sale')])
         for order in sale_orders:
-            auth = self.company_id.oilnet_login()
-            base_url = self.company_id.oilnet_url            
+            auth = order.company_id.oilnet_login()
+            base_url = order.company_id.oilnet_url            
             url = base_url + "/Api/NotaPedido/?numero=" + str(order.oilnet_id)
             r = requests.get(
                 url,
