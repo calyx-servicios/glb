@@ -61,13 +61,13 @@ class SaleOrder(models.Model):
     
     def action_quotation_send(self):
         result = self.oilnet_company()
-        if result != True:
+        if result == True:
             self.check_partner_sinc(result)
         return super().action_quotation_send()
 
     def action_send_whatsapp(self):
         result = self.oilnet_company()
-        if result != True:
+        if result == True:
             self.check_partner_sinc(result)
         return super().action_send_whatsapp()
 
