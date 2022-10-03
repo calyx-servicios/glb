@@ -15,9 +15,9 @@ class SaleOrder(models.Model):
 
     def oilnet_company(self):
         company_name = self.company_id.name.upper() 
-        if 'GESAL' in company_name and self.partner_id.oilnet_gesal_code != 0:
+        if 'GESAL' in company_name and self.partner_id.oilnet_gesal_code == 0:
             return 'GESAL'
-        elif 'BARRANCA' in company_name and self.partner_id.oilnet_barranca_code != 0:
+        elif 'BARRANCA' in company_name and self.partner_id.oilnet_barranca_code == 0:
             return 'BARRANCA'
         else:
             return True
@@ -61,13 +61,13 @@ class SaleOrder(models.Model):
     
     def action_quotation_send(self):
         result = self.oilnet_company()
-        if result == True:
+        if result != True:
             self.check_partner_sinc(result)
         return super().action_quotation_send()
 
     def action_send_whatsapp(self):
         result = self.oilnet_company()
-        if result == True:
+        if result != True:
             self.check_partner_sinc(result)
         return super().action_send_whatsapp()
 
