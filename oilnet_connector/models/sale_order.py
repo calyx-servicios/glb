@@ -97,12 +97,11 @@ class SaleOrder(models.Model):
 
     def send_note(self):
         oilnet_id = 0
-        result = self.oilnet_company()
-        if result != True:
-            if result == 'GESAL':
-                oilnet_id = self.partner_id.oilnet_gesal_code
-            else:
-                oilnet_id = self.partner_id.oilnet_barranca_code
+        company_name = self.company_id.name.upper() 
+        if 'GESAL' in company_name:
+            oilnet_id = self.partner_id.oilnet_gesal_code
+        elif 'BARRANCA' in company_name:
+            oilnet_id = self.partner_id.oilnet_barranca_code
         data = self.prepare_note(oilnet_id)
         auth = self.company_id.sudo().oilnet_login()
         url = self.company_id.oilnet_url
