@@ -1,6 +1,8 @@
 from odoo import models, fields
 
-class CrmLead(models.Model):
+class ResPartner(models.Model):
     _inherit = "res.partner"
 
-    oilnet_id = fields.Integer()
+    oilnet_gesal_code = fields.Integer('Oilnet Code Gesal')
+    oilnet_barranca_code = fields.Integer('Oilnet Code La Barranca')
+
