@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <odoo noupdate="1">
-
     <record forcecreate="True" id="oilnet_invoice_sync" model="ir.cron">
         <field name="name">Daily Oilnet Sync</field>
         <field name="interval_number">1</field>
@@ -15,5 +13,4 @@
         <field name="state">code</field>
         <field name="code">model.cron_update_notes_status()</field>
     </record>
-
 </odoo>
