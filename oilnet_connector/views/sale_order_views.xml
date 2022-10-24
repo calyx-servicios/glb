@@ -1,37 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-
-  <record id="view_order_form_oilnet" model="ir.ui.view">
-    <field name="name">sale.order.form</field>
-    <field name="model">sale.order</field>
-    <field name="inherit_id" ref="sale.view_order_form"/>
-    <field name="arch" type="xml">
-
-      <field name="state" position="attributes">
-        <attribute name="statusbar_visible">draft,sent,sale,financial_auth,logistics_auth,pending</attribute>
-      </field>
-
-      <xpath expr="//button[@name='action_confirm'][1]" position="attributes">
-        <attribute name="attrs">{'invisible': [('state','not in',('sent'))]}</attribute>
-      </xpath>
-
-      <xpath expr="//button[@name='action_confirm'][2]" position="attributes">
-        <attribute name="attrs">{'invisible': True}</attribute>
-      </xpath>
-
-      <xpath expr="//field[@name='partner_id']" position="after">
-        <field name="oilnet_id" />
-      </xpath>
-
-      <xpath expr="//header/button[@name='action_cancel']" position="after">
-        <button name="action_pending" type="object" string="Go to pending" attrs="{'invisible': [('state', '=', 'pending')]}"/>
-      </xpath>
-
-      <xpath expr="//header/button[@name='action_pending']" position="after">
-        <button name="action_logistics_auth" type="object" string="Pasar a Autorizado" attrs="{'invisible': [('state', '=', 'logistics_auth')]}"/>
-      </xpath>
-      
-    </field>
-  </record>
-
+	<record id="view_order_form_oilnet" model="ir.ui.view">
+		<field name="name">sale.order.form</field>
+		<field name="model">sale.order</field>
+		<field name="inherit_id" ref="sale.view_order_form"/>
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='state']" position="attributes">
+				<attribute name="statusbar_visible">draft,sent,sale,financial_auth,logistics_auth,pending</attribute>
+			</xpath>
+			<xpath expr="//field[@name='company_id']" position="attributes">
+				<attribute name="attrs">{'readonly': [('state','not in',('draft'))]}</attribute>
+			</xpath>
+			<xpath expr="//button[@name='action_confirm'][1]" position="attributes">
+				<attribute name="attrs">{'invisible': [('state','not in',('sent'))]}</attribute>
+			</xpath>
+			<xpath expr="//button[@name='action_confirm'][2]" position="attributes">
+				<attribute name="attrs">{'invisible': True}</attribute>
+			</xpath>
+			<xpath expr="//field[@name='client_order_ref']" position="after">
+				<field name="oilnet_id"/>
+			</xpath>
+			<xpath expr="//header/button[@name='action_cancel']" position="after">
+				<button name="action_pending" type="object" string="Go to pending" attrs="{'invisible': [('state', '=', 'pending')]}"/>
+			</xpath>
+			<xpath expr="//header/button[@name='action_pending']" position="after">
+				<button name="action_logistics_auth" type="object" string="Go to Authorized" attrs="{'invisible': [('state', '=', 'logistics_auth')]}"/>
+			</xpath>
+		</field>
+	</record>
 </odoo>

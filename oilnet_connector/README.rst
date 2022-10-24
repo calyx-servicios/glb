@@ -55,6 +55,8 @@ Contributors
 * `Calyx Servicios S.A. <http://www.calyxservicios.com.ar/>`_
   
   * Paradiso Cristian
+  
+  * Perez Gabriela
 
 Maintainers
 ~~~~~~~~~~~
