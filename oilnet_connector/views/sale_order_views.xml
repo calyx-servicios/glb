@@ -23,9 +23,6 @@
 			<xpath expr="//header/button[@name='action_cancel']" position="after">
 				<button name="action_pending" type="object" string="Go to pending" attrs="{'invisible': [('state', '=', 'pending')]}"/>
 			</xpath>
-			<xpath expr="//header/button[@name='action_pending']" position="after">
-				<button name="action_logistics_auth" type="object" string="Go to Authorized" attrs="{'invisible': [('state', '=', 'logistics_auth')]}"/>
-			</xpath>
 		</field>
 	</record>
 </odoo>

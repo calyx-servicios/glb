@@ -45,11 +45,6 @@ msgstr "Autorizado Finanzas"
 
 #. module: oilnet_connector
 #: model_terms:ir.ui.view,arch_db:oilnet_connector.view_order_form_oilnet
-msgid "Go to Authorized"
-msgstr "Pasar a autorizado"
-
-#. module: oilnet_connector
-#: model_terms:ir.ui.view,arch_db:oilnet_connector.view_order_form_oilnet
 msgid "Go to pending"
 msgstr "Pasar a Pendiente"
 
@@ -65,12 +60,14 @@ msgid "Oilnet"
 msgstr "OilNet Id"
 
 #. module: oilnet_connector
+#: model:ir.model.fields,field_description:oilnet_connector.field_account_payment_term__oilnet_gesal_code
 #: model:ir.model.fields,field_description:oilnet_connector.field_res_partner__oilnet_gesal_code
 #: model:ir.model.fields,field_description:oilnet_connector.field_res_users__oilnet_gesal_code
 msgid "Oilnet Code Gesal"
 msgstr "OilNet Código para Gesal"
 
 #. module: oilnet_connector
+#: model:ir.model.fields,field_description:oilnet_connector.field_account_payment_term__oilnet_barranca_code
 #: model:ir.model.fields,field_description:oilnet_connector.field_res_partner__oilnet_barranca_code
 #: model:ir.model.fields,field_description:oilnet_connector.field_res_users__oilnet_barranca_code
 msgid "Oilnet Code La Barranca"
@@ -138,6 +135,12 @@ msgstr "Algo salió mal esto es lo que obtuvimos, código de estado: "
 #: model:ir.model.fields,field_description:oilnet_connector.field_sale_order__state
 msgid "Status"
 msgstr "Estado"
+
+#. module: oilnet_connector
+#: code:addons/oilnet_connector/models/sale_order.py:0
+#, python-format
+msgid "The payment term selected doesnt have oilnet code set for "
+msgstr "El plazo de pago seleccionado no tiene establecido el código oilnet para "
 
 #. module: oilnet_connector
 #: model_terms:ir.ui.view,arch_db:oilnet_connector.view_company_form_oilnet_credencials

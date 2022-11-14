@@ -8,7 +8,7 @@
     "website": "http://odoo.calyx-cloud.com.ar/",
     "license": "AGPL-3",
     "category": "Custom",
-    "version": "13.0.2.1.0",
+    "version": "13.0.3.1.0",
     'depends': [
         'base',
         'sale',
@@ -20,5 +20,6 @@
         'views/res_company_views.xml',
         'views/res_partner_views.xml',
         'views/sale_order_views.xml',
+        'views/account_payment_term_views.xml',
     ],
 }
