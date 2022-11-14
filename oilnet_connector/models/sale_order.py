@@ -86,9 +86,9 @@ class SaleOrder(models.Model):
             field_company = 'GESAL'
         elif 'BARRANCA' in company_name:
             field_company = 'BARRANCA'
-        if field_company == 'GESAL' and self.payment_term_id.oilnet_gesal_code:
+        if field_company == 'GESAL':
             return int(self.payment_term_id.oilnet_gesal_code)
-        elif field_company == 'BARRANCA' and self.payment_term_id.oilnet_barranca_code:
+        elif field_company == 'BARRANCA':
             return int(self.payment_term_id.oilnet_barranca_code)
         else:
             raise Warning(_("The payment term selected doesnt have oilnet code set for " + field_company))
