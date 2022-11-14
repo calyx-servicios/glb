@@ -4,7 +4,7 @@ import requests
 
 class SaleOrder(models.Model):
     _inherit = "sale.order"
- 
+
     oilnet_id = fields.Char('Oilnet Id')
     state = fields.Selection(selection_add=[
         ('pending','Pending'),
@@ -42,18 +42,18 @@ class SaleOrder(models.Model):
                 raise Warning(partner_dict.get("resultado",False))
         else:
             raise Warning(_('Something went wrong this is what we got, status code: ') + str(r.status_code))
-    
+
     def action_pending(self):
         if self.state not in ['pending']:
             self.write({
                 'state': 'pending'
             })
-            
+
     def action_logistics_auth(self):
         self.write({
             'state': 'logistics_auth'
         })
-    
+
     def action_financial_auth(self):
         self.write({
             'state': 'financial_auth'
@@ -77,9 +77,22 @@ class SaleOrder(models.Model):
             note_lines.append({
                 "articulo_id": int(line.product_template_id.oilnet_id),
                 "cantidad": line.product_uom_qty,
-                "precio": line.price_subtotal})
+                "precio": line.price_unit})
         return note_lines
-    
+
+    def get_payment_term_id(self):
+        company_name = self.company_id.name.upper()
+        if 'GESAL' in company_name:
+            field_company = 'GESAL'
+        elif 'BARRANCA' in company_name:
+            field_company = 'BARRANCA'
+        if field_company == 'GESAL' and self.payment_term_id.oilnet_gesal_code:
+            return int(self.payment_term_id.oilnet_gesal_code)
+        elif field_company == 'BARRANCA' and self.payment_term_id.oilnet_barranca_code:
+            return int(self.payment_term_id.oilnet_barranca_code)
+        else:
+            raise Warning(_("The payment term selected doesnt have oilnet code set for " + field_company))
+
     def prepare_note(self, oilnet_id):
         note = {}
         note['id'] = 0
@@ -91,7 +104,7 @@ class SaleOrder(models.Model):
         if self.partner_id.street:
             note['domicilioEntrega'] = self.partner_id.street
         if self.payment_term_id:
-            note['formaPago'] = self.payment_term_id.name
+            note['formaPago_id'] = self.get_payment_term_id()
         note['items'] = self.prepare_note_line()
         return note
 
@@ -144,4 +157,3 @@ class SaleOrder(models.Model):
                         order.action_logistics_auth()
             else:
                 raise Warning(_('Something went wrong this is what we got, status code: ') + str(r.status_code))
-
