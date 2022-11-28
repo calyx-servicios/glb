@@ -17,6 +17,12 @@
 			<xpath expr="//button[@name='action_confirm'][2]" position="attributes">
 				<attribute name="attrs">{'invisible': True}</attribute>
 			</xpath>
+			<xpath expr="//button[@name='%(sale.action_view_sale_advance_payment_inv)d'][1]" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+			<xpath expr="//button[@name='%(sale.action_view_sale_advance_payment_inv)d'][2]" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
 			<xpath expr="//field[@name='client_order_ref']" position="after">
 				<field name="oilnet_id"/>
 			</xpath>
