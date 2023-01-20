@@ -72,8 +72,8 @@
                     </group>
                     <group name="annual_consumption" string="Annual Consumption">
                         <group name="fuel" string="Fuel" col="2">
-                            <field name="grade_2_diesel"/>
-                            <field name="grade_3_diesel"/>
+                            <field name="grade_2_diesel_number"/>
+                            <field name="grade_3_diesel_number"/>
                         </group>
                         <group name="oils" string="oils">
                             <field name="urea_qty"/>
@@ -157,7 +157,6 @@
         
       </field>
     </record>
-
 
 
 </odoo>
