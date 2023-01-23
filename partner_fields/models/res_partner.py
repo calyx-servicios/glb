@@ -9,16 +9,17 @@ class ResPartner(models.Model):
     _inherit = "res.partner"
 
     # _____________SALES TAB_______________
-    zone = fields.Selection([
-        ("A", "A"),
-        ("B1", "B1"),
-        ("B2","B2"),
-        ("C", "C"),
-        ("SL1", "SL1"),
-        ("SL2", "SL2"),
-        ("EESS_SUPPLY","EESS ABASTO"),
-        ("EESS_ALEJANDRO","EESS ALEJANDRO"),
-        ("CORDOBA_WHOLESALER","MAYORISTA CORDOBA")
+    zone = fields.Selection(
+        [
+            ("A", "A"),
+            ("B1", "B1"),
+            ("B2", "B2"),
+            ("C", "C"),
+            ("SL1", "SL1"),
+            ("SL2", "SL2"),
+            ("EESS_SUPPLY", "EESS ABASTO"),
+            ("EESS_ALEJANDRO", "EESS ALEJANDRO"),
+            ("CORDOBA_WHOLESALER", "MAYORISTA CORDOBA"),
         ],
         string="Zone",
     )
@@ -29,8 +30,8 @@ class ResPartner(models.Model):
             ("industry", "Industry"),
             ("agro_contractor", "Agricultural Contractor"),
             ("producer_contractor", "Producer/Contractor"),
-            ("fuel_dispenser","Fuel Dispensers"),
-            ("other", "Other"), 
+            ("fuel_dispenser", "Fuel Dispensers"),
+            ("other", "Other"),
         ],
         string="Main Activity",
     )
@@ -83,24 +84,26 @@ class ResPartner(models.Model):
     other_lubricant_type = fields.Text(string="Other Lubricant Type")
     #   ___ANNUAL CONSUMPTION___
     #       ___FUEL___
-    grade_2_diesel = fields.Selection(
-        [
-            ("1000-5000", "1000-5000"),
-            ("5000-10000", "5000-10000"),
-            ("10000-15000", "10000-15000"),
-            (">15000", "More than 15000"),
-        ],
-        string="Grade 2 Diesel",
-    )
-    grade_3_diesel = fields.Selection(
-        [
-            ("1000-5000", "1000-5000"),
-            ("5000-10000", "5000-10000"),
-            ("10000-15000", "10000-15000"),
-            (">15000", "More than 15000"),
-        ],
-        string="Grade 3 Diesel",
-    )
+    # grade_2_diesel = fields.Selection(
+    #     [
+    #         ("1000-5000", "1000-5000"),
+    #         ("5000-10000", "5000-10000"),
+    #         ("10000-15000", "10000-15000"),
+    #         (">15000", "More than 15000"),
+    #     ],
+    #     string="Grade 2 Diesel",
+    # )
+    # grade_3_diesel = fields.Selection(
+    #     [
+    #         ("1000-5000", "1000-5000"),
+    #         ("5000-10000", "5000-10000"),
+    #         ("10000-15000", "10000-15000"),
+    #         (">15000", "More than 15000"),
+    #     ],
+    #     string="Grade 3 Diesel",
+    # )
+    grade_2_diesel_number = fields.Integer(string="Grade 2 Diesel")
+    grade_3_diesel_number = fields.Integer(string="Grade 3 Diesel")
     #       ___LUBRICANT___
     urea_qty = fields.Selection(
         [
