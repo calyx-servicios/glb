@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sale_order_view_form_extended" model="ir.ui.view">
+        <field name="name">sale.order.form.extended</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='partner_id']" position="after">
+                <field name="condition"/>
+                <field name="reason"/>
+                <field name="competitor"/>
+                <field name="observations"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="sale_order_filter_condition" model="ir.ui.view">
+        <field name="name">sale.order.filter.condition</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_sales_order_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='customer']" position="after">
+                <separator/>
+                <filter string="Condition" name="group_condition" domain="[]" context="{'group_by': 'condition'}"/>
+                <filter string="Reason" name="group_condition" domain="[]" context="{'group_by': 'reason'}"/>
+                <filter string="Competitor" name="group_condition" domain="[]" context="{'group_by': 'competitor'}"/>
+                <separator/>
+            </xpath>
+            <xpath expr="//filter[@name='my_sale_orders_filter']" position="before">
+                <group expand="0" name="condition_filters">
+                    <filter string="Condition Won" name="won_condition" domain="[('condition','=', 'won')]"/>
+                    <filter string="Condition In progress" name="in_progress_condition" domain="[('condition','=', 'in_progress')]"/>
+                    <filter string="Condition Lost" name="lost_condition" domain="[('condition','=', 'lost')]"/>
+                </group>
+                <separator/>
+                <group expand="0" name="reason_filters">
+                    <filter string="Reason Price" name="price_reason" domain="[('reason','=', 'Price')]"/>
+                    <filter string="Reason Quality" name="quality_reason" domain="[('reason','=', 'quality')]"/>
+                    <filter string="Reason Logistics" name="logistics_reason" domain="[('reason','=', 'logistics')]"/>
+                    <filter string="Reason Deadlines" name="deadlines_reason" domain="[('reason','=', 'deadlines')]"/>
+                    <filter string="Reason Others" name="others_reason" domain="[('reason','=', 'others')]"/>
+                </group>
+                <separator/>
+                <group expand="0" name="competitor_filters">
+                    <filter string="YPF" name="ypf_competitor" domain="[('competitor','=', 'ypf')]"/>
+                    <filter string="SHELL" name="shell_competitor" domain="[('competitor','=', 'shell')]"/>
+                    <filter string="Puma" name="puma_competitor" domain="[('competitor','=', 'puma')]"/>
+                    <filter string="Other" name="others_competitor" domain="[('competitor','=', 'other')]"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>
