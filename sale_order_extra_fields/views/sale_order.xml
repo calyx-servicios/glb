@@ -7,7 +7,7 @@
         <field name="arch" type="xml">
             <xpath expr="//field[@name='partner_id']" position="after">
                 <field name="condition"/>
-                <field name="reason"/>
+                <field name="reason" attrs="{'readonly': [('condition', 'not in', ['won', 'lost'])]}"/>
                 <field name="competitor"/>
                 <field name="observations"/>
             </xpath>
