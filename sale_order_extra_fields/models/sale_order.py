@@ -7,7 +7,7 @@ class SaleOrder(models.Model):
     condition = fields.Selection([('won', 'Won'), ('in_progress', 'In Progress'), ('lost', 'Lost')],
         string='Condition', readonly=True, store=True, compute='_compute_condition')
     reason = fields.Selection([('price', 'Price'), ('quality', 'Quality'), ('logistics', 'Logistics'), ('deadlines', 'Deadlines'), ('others', 'Others')],
-        string='Reason Won or Lost', readonly=False, store=True, compute='_compute_condition')
+        string='Reason Won or Lost', store=True, compute='_compute_condition')
     competitor = fields.Selection([('ypf', 'YPF'), ('shell', 'SHELL'), ('puma', 'PUMA'), ('other', 'OTHER')],
         string='Competitor', readonly=False, store=True)
     observations = fields.Text(string='Observations')
