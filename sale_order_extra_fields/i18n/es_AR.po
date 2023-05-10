@@ -1,0 +1,156 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sale_order_extra_fields
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-04 15:05+0000\n"
+"PO-Revision-Date: 2023-05-04 15:05+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sale_order_extra_fields
+#: model:ir.model.fields,field_description:sale_order_extra_fields.field_sale_order__competitor
+#: model_terms:ir.ui.view,arch_db:sale_order_extra_fields.sale_order_filter_condition
+msgid "Competitor"
+msgstr "Competidor"
+
+#. module: sale_order_extra_fields
+#: model:ir.model.fields,field_description:sale_order_extra_fields.field_sale_order__condition
+#: model_terms:ir.ui.view,arch_db:sale_order_extra_fields.sale_order_filter_condition
+msgid "Condition"
+msgstr "Condición"
+
+#. module: sale_order_extra_fields
+#: model_terms:ir.ui.view,arch_db:sale_order_extra_fields.sale_order_filter_condition
+msgid "Condition In progress"
+msgstr "Condición en curso"
+
+#. module: sale_order_extra_fields
+#: model_terms:ir.ui.view,arch_db:sale_order_extra_fields.sale_order_filter_condition
+msgid "Condition Lost"
+msgstr "Condición perdida"
+
+#. module: sale_order_extra_fields
+#: model_terms:ir.ui.view,arch_db:sale_order_extra_fields.sale_order_filter_condition
+msgid "Condition Won"
+msgstr "Condición Ganada"
+
+#. module: sale_order_extra_fields
+#: model:ir.model.fields.selection,name:sale_order_extra_fields.selection__sale_order__reason__deadlines
+msgid "Deadlines"
+msgstr "Plazos"
+
+#. module: sale_order_extra_fields
+#: model:ir.model.fields.selection,name:sale_order_extra_fields.selection__sale_order__condition__in_progress
+msgid "In Progress"
+msgstr "En Curso"
+
+#. module: sale_order_extra_fields
+#: model:ir.model.fields.selection,name:sale_order_extra_fields.selection__sale_order__reason__logistics
+msgid "Logistics"
+msgstr "Logística"
+
+#. module: sale_order_extra_fields
+#: model:ir.model.fields.selection,name:sale_order_extra_fields.selection__sale_order__condition__lost
+msgid "Lost"
+msgstr "Perdido"
+
+#. module: sale_order_extra_fields
+#: model:ir.model.fields.selection,name:sale_order_extra_fields.selection__sale_order__competitor__other
+msgid "OTHER"
+msgstr "OTROS"
+
+#. module: sale_order_extra_fields
+#: model:ir.model.fields,field_description:sale_order_extra_fields.field_sale_order__observations
+msgid "Observations"
+msgstr "Observaciones"
+
+#. module: sale_order_extra_fields
+#: model:ir.model.fields.selection,name:sale_order_extra_fields.selection__sale_order__reason__others
+#: model_terms:ir.ui.view,arch_db:sale_order_extra_fields.sale_order_filter_condition
+msgid "Others"
+msgstr "Otros"
+
+#. module: sale_order_extra_fields
+#: model:ir.model.fields.selection,name:sale_order_extra_fields.selection__sale_order__competitor__puma
+msgid "PUMA"
+msgstr ""
+
+#. module: sale_order_extra_fields
+#: model:ir.model.fields.selection,name:sale_order_extra_fields.selection__sale_order__reason__price
+msgid "Price"
+msgstr "Precio"
+
+#. module: sale_order_extra_fields
+#: model_terms:ir.ui.view,arch_db:sale_order_extra_fields.sale_order_filter_condition
+msgid "Puma"
+msgstr ""
+
+#. module: sale_order_extra_fields
+#: model:ir.model.fields.selection,name:sale_order_extra_fields.selection__sale_order__reason__quality
+msgid "Quality"
+msgstr "Calidad"
+
+#. module: sale_order_extra_fields
+#: model_terms:ir.ui.view,arch_db:sale_order_extra_fields.sale_order_filter_condition
+msgid "Reason"
+msgstr "Razón"
+
+#. module: sale_order_extra_fields
+#: model_terms:ir.ui.view,arch_db:sale_order_extra_fields.sale_order_filter_condition
+msgid "Reason Deadlines"
+msgstr "Razón Plazos"
+
+#. module: sale_order_extra_fields
+#: model_terms:ir.ui.view,arch_db:sale_order_extra_fields.sale_order_filter_condition
+msgid "Reason Logistics"
+msgstr "Razón Logística"
+
+#. module: sale_order_extra_fields
+#: model_terms:ir.ui.view,arch_db:sale_order_extra_fields.sale_order_filter_condition
+msgid "Reason Others"
+msgstr "Razón Otros"
+
+#. module: sale_order_extra_fields
+#: model_terms:ir.ui.view,arch_db:sale_order_extra_fields.sale_order_filter_condition
+msgid "Reason Price"
+msgstr "Razón Precio"
+
+#. module: sale_order_extra_fields
+#: model_terms:ir.ui.view,arch_db:sale_order_extra_fields.sale_order_filter_condition
+msgid "Reason Quality"
+msgstr "Razón Calidad"
+
+#. module: sale_order_extra_fields
+#: model:ir.model.fields,field_description:sale_order_extra_fields.field_sale_order__reason
+msgid "Reason Won or Lost"
+msgstr "Razón de ganado o perdido"
+
+#. module: sale_order_extra_fields
+#: model:ir.model.fields.selection,name:sale_order_extra_fields.selection__sale_order__competitor__shell
+#: model_terms:ir.ui.view,arch_db:sale_order_extra_fields.sale_order_filter_condition
+msgid "SHELL"
+msgstr ""
+
+#. module: sale_order_extra_fields
+#: model:ir.model,name:sale_order_extra_fields.model_sale_order
+msgid "Sales Order"
+msgstr "Pedido de venta"
+
+#. module: sale_order_extra_fields
+#: model:ir.model.fields.selection,name:sale_order_extra_fields.selection__sale_order__condition__won
+msgid "Won"
+msgstr "Ganado"
+
+#. module: sale_order_extra_fields
+#: model:ir.model.fields.selection,name:sale_order_extra_fields.selection__sale_order__competitor__ypf
+#: model_terms:ir.ui.view,arch_db:sale_order_extra_fields.sale_order_filter_condition
+msgid "YPF"
+msgstr ""
