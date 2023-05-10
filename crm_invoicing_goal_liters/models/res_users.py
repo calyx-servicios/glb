@@ -39,20 +39,15 @@ class ResUsers(models.Model):
     
     def cron_monthly_calculation_ig(self):
         date = datetime.now() + relativedelta(months=-1)
-        records = self.search([])
         user_monthly_model = self.env['res.users.monthly.records']
         month_date = self.get_month_to_date(date) + " - " + str(date.year)
 
-        for user in records:
-            user_monthly_model.create({
-                'registered_month': month_date,
-                'res_user_id': user.id,
-                'planned_liters' : user.planned_liters,
-                'current_liters' : self.get_sum_values(date, user)
-            })
-            user.write({
-                'planned_liters' : 0,
-            })
+        for user in self.search([]):
+            record = user_monthly_model.search([('res_user_id', '=', user.id), ('registered_month', '=', month_date)])
+            if record:
+                record.write({
+                    'current_liters': self.get_sum_values(date, user),
+                })
 
     def get_month_to_date(self, date_period):
         dict_month = {
@@ -64,3 +59,29 @@ class ResUsers(models.Model):
         month = dict_month[str(date_period.month)]
         return month
 
+    def generate_records_by_year(self):
+        for user in self:
+            year = datetime.now().year
+            dict_month = {
+                "1": _("January"), "2": _("February"), "3": _("March"), 
+                "4": _("April"), "5": _("May"), "6": _("June"),
+                "7": _("July"), "8": _("August"), "9": _("September"), 
+                "10": _("October"), "11": _("November"), "12":  _("December")
+            }
+            records = []
+            for month in range(1, 13):
+                month_name = dict_month[str(month)]
+                month_date = month_name + " - " + str(year)
+                existing_records = self.env['res.users.monthly.records'].search([
+                    ('registered_month', '=', month_date),
+                    ('res_user_id', '=', user.id)
+                ])
+                if not existing_records:
+                    records.append((0, 0, {
+                        'registered_month': month_date,
+                        'res_user_id': user.id,
+                        'planned_liters': user.planned_liters,
+                        'current_liters': user.current_liters,
+                    }))
+            if records:
+                user.write({'user_monthly_records_ids': records})
