@@ -13,7 +13,7 @@ class CrmTeam(models.Model):
             for member in rec.member_ids:
                 if member.current_liters:
                     values.append(member.current_liters)
-                
+
         self.current_liters = sum(values)
         
     team_monthly_records_ids = fields.One2many('crm.team.monthly.records', 'team_id', 'Monthly records for sales team')
