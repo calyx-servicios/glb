@@ -22,15 +22,16 @@
 			<xpath expr="//notebook" position="inside">
 				<page string="Goals invoicing" name="goals_invoicing" groups="crm_invoicing_goal_liters.group_monthly_records_views_access">
 					<group>
-						<field name="planned_liters"/>
+						<button name="generate_records_by_year" string="Create Periods" type="object" class="oe_highlight"/>
 					</group>
+					<label for="user_monthly_records_ids" />
 					<group name="monthly_records">
-						<field name="user_monthly_records_ids" readonly="1" editable="bottom">
-							<tree create="false" delete="false" edit="false" editable="bottom">
+						<field name="user_monthly_records_ids" editable="bottom" nolabel="1">
+							<tree create="false" delete="false" editable="bottom">
 								<field name="res_user_id" invisible="1"/>
-								<field name="registered_month"/>
+								<field name="registered_month" readonly="1"/>
 								<field name="planned_liters"/>
-								<field name="current_liters"/>
+								<field name="current_liters" readonly="1"/>
 							</tree>
 						</field>
 					</group>
