@@ -15,6 +15,7 @@ class ResUsers(models.Model):
             rec.current_liters = self.get_sum_values(date, rec)
 
     current_liters = fields.Float("Current Liters", compute=_compute_current_liters)
+
     planned_liters = fields.Float("Planned Liters")
     user_monthly_records_ids = fields.One2many('res.users.monthly.records', 'res_user_id', 'Monthly records', readonly=False)
 
@@ -88,5 +89,3 @@ class ResUsers(models.Model):
 
         if records_to_create:
             self.write({'user_monthly_records_ids': records_to_create})
-
-
