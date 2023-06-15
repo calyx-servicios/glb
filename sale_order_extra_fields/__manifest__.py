@@ -9,7 +9,7 @@
     "website": "http://odoo.calyx-cloud.com.ar/",
     "license": "AGPL-3",
     "category": "Contacts",
-    "version": "13.0.1.1.1",
+    "version": "13.0.1.2.1",
     "development_status": "Production/Stable",
     "application": False,
     "installable": True,
