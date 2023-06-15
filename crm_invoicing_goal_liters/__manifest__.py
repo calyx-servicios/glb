@@ -11,9 +11,9 @@
     "website": "http://odoo.calyx-cloud.com.ar/",
     "license": "AGPL-3",
     "category": "Custom",
-    "version": "13.0.2.1.0",
+    "version": "13.0.2.3.0",
     'depends': [
-        'crm', 
+        'crm',
         'sale',
         'oilnet_connector'
     ],
