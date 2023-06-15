@@ -1,9 +1,6 @@
 from odoo import models, fields, _
 from datetime import datetime, timedelta
 
-import logging
-logger = logging.getLogger(__name__)
-
 
 class ResUsers(models.Model):
     _inherit = 'res.users'
@@ -57,8 +54,6 @@ class ResUsers(models.Model):
                 record.write({
                     'current_liters': self.get_sum_values(date, user),
                 })
-            else:
-                logger.warning(_('No record found for the user: {}').format(user))
 
     def get_month_to_date(self, date_period):
         dict_month = {
