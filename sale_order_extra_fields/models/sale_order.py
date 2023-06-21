@@ -3,7 +3,7 @@ from odoo import models, fields, api, _
 
 class SaleOrder(models.Model):
     _inherit = 'sale.order'
-    
+
     condition = fields.Selection([('won', 'Won'), ('in_progress', 'In Progress'), ('lost', 'Lost')],
         string='Condition', readonly=True, store=True, compute='_compute_condition')
     reason = fields.Selection([('price', 'Price'), ('quality', 'Quality'), ('logistics', 'Logistics'), ('deadlines', 'Deadlines'), ('others', 'Others')],
