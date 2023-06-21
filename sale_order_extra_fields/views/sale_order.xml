@@ -34,7 +34,7 @@
                 </group>
                 <separator/>
                 <group expand="0" name="reason_filters">
-                    <filter string="Reason Price" name="price_reason" domain="[('reason','=', 'Price')]"/>
+                    <filter string="Reason Price" name="price_reason" domain="[('reason','=', 'price')]"/>
                     <filter string="Reason Quality" name="quality_reason" domain="[('reason','=', 'quality')]"/>
                     <filter string="Reason Logistics" name="logistics_reason" domain="[('reason','=', 'logistics')]"/>
                     <filter string="Reason Deadlines" name="deadlines_reason" domain="[('reason','=', 'deadlines')]"/>
