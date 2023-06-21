@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 13.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-09 11:02+0000\n"
-"PO-Revision-Date: 2023-05-09 11:02+0000\n"
+"POT-Creation-Date: 2023-06-14 12:23+0000\n"
+"PO-Revision-Date: 2023-06-14 12:23+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -17,13 +17,11 @@ msgstr ""
 
 #. module: crm_invoicing_goal_liters
 #: code:addons/crm_invoicing_goal_liters/models/res_users.py:0
-#: code:addons/crm_invoicing_goal_liters/models/res_users.py:0
 #, python-format
 msgid "April"
 msgstr "Abril"
 
 #. module: crm_invoicing_goal_liters
-#: code:addons/crm_invoicing_goal_liters/models/res_users.py:0
 #: code:addons/crm_invoicing_goal_liters/models/res_users.py:0
 #, python-format
 msgid "August"
@@ -81,7 +79,6 @@ msgstr "Litros Actuales"
 
 #. module: crm_invoicing_goal_liters
 #: code:addons/crm_invoicing_goal_liters/models/res_users.py:0
-#: code:addons/crm_invoicing_goal_liters/models/res_users.py:0
 #, python-format
 msgid "December"
 msgstr "Diciembre"
@@ -93,7 +90,6 @@ msgid "Display Name"
 msgstr "Nombre mostrado"
 
 #. module: crm_invoicing_goal_liters
-#: code:addons/crm_invoicing_goal_liters/models/res_users.py:0
 #: code:addons/crm_invoicing_goal_liters/models/res_users.py:0
 #, python-format
 msgid "February"
@@ -112,20 +108,17 @@ msgstr ""
 
 #. module: crm_invoicing_goal_liters
 #: code:addons/crm_invoicing_goal_liters/models/res_users.py:0
-#: code:addons/crm_invoicing_goal_liters/models/res_users.py:0
 #, python-format
 msgid "January"
 msgstr "Enero"
 
 #. module: crm_invoicing_goal_liters
 #: code:addons/crm_invoicing_goal_liters/models/res_users.py:0
-#: code:addons/crm_invoicing_goal_liters/models/res_users.py:0
 #, python-format
 msgid "July"
 msgstr "Julio"
 
 #. module: crm_invoicing_goal_liters
-#: code:addons/crm_invoicing_goal_liters/models/res_users.py:0
 #: code:addons/crm_invoicing_goal_liters/models/res_users.py:0
 #, python-format
 msgid "June"
@@ -161,13 +154,11 @@ msgstr ""
 
 #. module: crm_invoicing_goal_liters
 #: code:addons/crm_invoicing_goal_liters/models/res_users.py:0
-#: code:addons/crm_invoicing_goal_liters/models/res_users.py:0
 #, python-format
 msgid "March"
 msgstr "Marzo"
 
 #. module: crm_invoicing_goal_liters
-#: code:addons/crm_invoicing_goal_liters/models/res_users.py:0
 #: code:addons/crm_invoicing_goal_liters/models/res_users.py:0
 #, python-format
 msgid "May"
@@ -225,13 +216,17 @@ msgstr "Registro ensual de usuarios para metas de Facturación"
 
 #. module: crm_invoicing_goal_liters
 #: code:addons/crm_invoicing_goal_liters/models/res_users.py:0
+#, python-format
+msgid "No record found for the user: {}"
+msgstr "No se encontró ningún registro para el usuario: {}"
+
+#. module: crm_invoicing_goal_liters
 #: code:addons/crm_invoicing_goal_liters/models/res_users.py:0
 #, python-format
 msgid "November"
 msgstr "Noviembre"
 
 #. module: crm_invoicing_goal_liters
-#: code:addons/crm_invoicing_goal_liters/models/res_users.py:0
 #: code:addons/crm_invoicing_goal_liters/models/res_users.py:0
 #, python-format
 msgid "October"
@@ -265,7 +260,6 @@ msgid "Sales Team"
 msgstr "Equipo de ventas"
 
 #. module: crm_invoicing_goal_liters
-#: code:addons/crm_invoicing_goal_liters/models/res_users.py:0
 #: code:addons/crm_invoicing_goal_liters/models/res_users.py:0
 #, python-format
 msgid "September"
