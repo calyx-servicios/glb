@@ -1,5 +1,6 @@
 from odoo import models, fields, api, _
 from datetime import datetime, timedelta
+from dateutil.relativedelta import relativedelta
 import calendar
 
 
@@ -24,45 +25,55 @@ class ResUsers(models.Model):
         last_day_date = any_day.replace(day=last_day)
         return last_day_date
 
-    def get_sum_values(self, start_date, rec):
-        last_day = self.last_day_of_month(start_date)
+    def get_sum_values(self, start_date, end_date, rec):
         values = []
         domain = [
-            ('user_id','=', rec.id),
+            ('user_id', '=', rec.id),
             ('state', '=', 'sale')
-            ]
+        ]
         sale_orders = self.env['sale.order'].search(domain)
 
         for so in sale_orders:
             for line in so.order_line:
-                if line.product_id.categ_id.name == 'Combustibles':
+                if line.product_id.categ_id.name == 'Combustibles' and start_date <= so.date_order <= end_date:
                     values.append(line.product_uom_qty)
         return sum(values)
 
+
     def cron_monthly_calculation_ig(self):
-    
+        
         today = datetime.now()
 
-        # Calculate the first day of the current month
+        # Calcula el primer día del mes actual
         start_date = today.replace(day=1)
 
-        # Calculate the last day of the current month
-        _, last_day = calendar.monthrange(today.year, today.month)
-        end_date = today.replace(day=last_day)
+        # Calcula el último día del mes actual
+        end_date = start_date + relativedelta(months=1, days=-1)
 
         user_monthly_model = self.env['res.users.monthly.records']
         month_date = self.get_month_to_date(start_date) + " - " + str(start_date.year)
 
         for user in self.search([]):
-            record = user_monthly_model.search([('res_user_id', '=', user.id), ('registered_month', '=', month_date)])
+            # Calcula el primer día y el último día del mes actual
+            month_start = start_date
+            month_end = end_date
 
-            # Calculate the liters sold between start_date and end_date
-            liters_sold = self.get_sum_values(start_date, user)
+            # Verifica si hoy es el primer día de un nuevo mes y actualiza las fechas en consecuencia
+            if today.day == 1:
+                # Si hoy es el primer día de un nuevo mes, actualiza month_start y month_end
+                month_start = today
+                month_end = today + relativedelta(day=1, months=1, days=-1)
+
+            # Calcula los litros vendidos entre month_start y month_end
+            liters_sold = self.get_sum_values(month_start, month_end, user)
+
+            record = user_monthly_model.search([('res_user_id', '=', user.id), ('registered_month', '=', month_date)])
 
             if record:
                 record.write({
                     'current_liters': liters_sold,
                 })
+
 
     def get_month_to_date(self, date_period):
         dict_month = {
