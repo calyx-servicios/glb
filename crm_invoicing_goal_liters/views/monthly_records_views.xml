@@ -94,8 +94,7 @@
     	name="Crm Team Monthly" sequence="20" 
     	groups="crm_invoicing_goal_liters.group_monthly_records_views_access"/>
 
-    <menuitem action="action_res_users_monthly" id="menu_res_users_monthly" parent="sale.menu_sale_config" 
-    	name="Res Users Monthly" sequence="21" 
-    	groups="crm_invoicing_goal_liters.group_monthly_records_views_access"/>
+    <menuitem action="action_res_users_monthly" id="menu_res_users_monthly" parent="sale.sale_order_menu" 
+    	name="Res Users Monthly" sequence="4" 
+    	groups="base.group_user"/>
 </odoo>
-
