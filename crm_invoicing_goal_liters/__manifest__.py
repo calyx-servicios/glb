@@ -11,7 +11,7 @@
     "website": "http://odoo.calyx-cloud.com.ar/",
     "license": "AGPL-3",
     "category": "Custom",
-    "version": "13.0.3.3.2",
+    "version": "13.0.4.3.2",
     'depends': [
         'crm',
         'sale',
@@ -21,6 +21,7 @@
         'data/ir_cron.xml',
         'security/monthly_records_views_access_security.xml',
         'security/ir.model.access.csv',
+        'security/monthly_records_rule.xml',
         'views/monthly_records_views.xml',
         'views/crm_team_views.xml',
         'views/res_users_views.xml',
