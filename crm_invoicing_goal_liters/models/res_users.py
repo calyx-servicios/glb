@@ -25,13 +25,16 @@ class ResUsers(models.Model):
         last_day_date = any_day.replace(day=last_day)
         return last_day_date
 
-    def get_sum_values(self, start_date, end_date, rec):
+    def get_sum_values(self, end_date, rec):
         values = []
         domain = [
             ('user_id', '=', rec.id),
             ('state', '=', 'sale')
         ]
         sale_orders = self.env['sale.order'].search(domain)
+
+        # Calcula start_date como 1 del mismo mes que end_date
+        start_date = datetime(end_date.year, end_date.month, 1)
 
         for so in sale_orders:
             for line in so.order_line:
@@ -41,31 +44,18 @@ class ResUsers(models.Model):
 
 
     def cron_monthly_calculation_ig(self):
-        
+
         today = datetime.now()
 
-        # Calcula el primer día del mes actual
-        start_date = today.replace(day=1)
-
-        # Calcula el último día del mes actual
-        end_date = start_date + relativedelta(months=1, days=-1)
-
         user_monthly_model = self.env['res.users.monthly.records']
-        month_date = self.get_month_to_date(start_date) + " - " + str(start_date.year)
+        month_date = self.get_month_to_date(today) + " - " + str(today.year)
 
         for user in self.search([]):
-            # Calcula el primer día y el último día del mes actual
-            month_start = start_date
-            month_end = end_date
+            # Calcula el último día del mes actual
+            month_end = (today + relativedelta(months=1, day=1)) - timedelta(days=1)
 
-            # Verifica si hoy es el primer día de un nuevo mes y actualiza las fechas en consecuencia
-            if today.day == 1:
-                # Si hoy es el primer día de un nuevo mes, actualiza month_start y month_end
-                month_start = today
-                month_end = today + relativedelta(day=1, months=1, days=-1)
-
-            # Calcula los litros vendidos entre month_start y month_end
-            liters_sold = self.get_sum_values(month_start, month_end, user)
+            # Calcula los litros vendidos 
+            liters_sold = self.get_sum_values(month_end, user)
 
             record = user_monthly_model.search([('res_user_id', '=', user.id), ('registered_month', '=', month_date)])
 
