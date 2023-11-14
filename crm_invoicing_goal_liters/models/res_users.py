@@ -1,5 +1,7 @@
-from odoo import models, fields, _
+from odoo import models, fields, api, _
 from datetime import datetime, timedelta
+from dateutil.relativedelta import relativedelta
+import calendar
 
 
 class ResUsers(models.Model):
@@ -8,9 +10,8 @@ class ResUsers(models.Model):
     def _compute_current_liters(self):
         """ Bring liters of sales orders that are of the "Fuel" category and belong to the team member. """
         today = datetime.now()
-        first_day_previous_month = datetime(today.year, today.month, 1) - timedelta(days=1)
-        first_day_previous_month = datetime(first_day_previous_month.year, first_day_previous_month.month, 1)
-        date = first_day_previous_month
+        first_day_current_month = datetime(today.year, today.month, 1)
+        date = first_day_current_month
         for rec in self:
             rec.current_liters = self.get_sum_values(date, rec)
 
@@ -20,41 +21,49 @@ class ResUsers(models.Model):
     user_monthly_records_ids = fields.One2many('res.users.monthly.records', 'res_user_id', 'Monthly records', readonly=False)
 
     def last_day_of_month(self, any_day):
-        next_month = any_day.replace(day=28) + timedelta(days=4)
-        return next_month - timedelta(days=next_month.day)
+        _, last_day = calendar.monthrange(any_day.year, any_day.month)
+        last_day_date = any_day.replace(day=last_day)
+        return last_day_date
 
-    def get_sum_values(self, start_date, rec):
-        last_day = self.last_day_of_month(start_date)
+    def get_sum_values(self, end_date, rec):
         values = []
         domain = [
-            ('user_id','=', rec.id),
-            ('state', '=', 'logistics_auth'),
-            ('authorized_date', '>=', start_date.date()),
-            ('authorized_date', '<=', last_day.date())
+            ('user_id', '=', rec.id),
+            ('state', '=', 'sale')
         ]
         sale_orders = self.env['sale.order'].search(domain)
 
+        # Calcula start_date como 1 del mismo mes que end_date
+        start_date = datetime(end_date.year, end_date.month, 1)
+
         for so in sale_orders:
             for line in so.order_line:
-                if line.product_id.categ_id.name == 'Combustibles':
+                if line.product_id.categ_id.name == 'Combustibles' and start_date <= so.date_order <= end_date:
                     values.append(line.product_uom_qty)
         return sum(values)
 
+
     def cron_monthly_calculation_ig(self):
+
         today = datetime.now()
-        first_day_previous_month = datetime(today.year, today.month, 1) - timedelta(days=1)
-        first_day_previous_month = datetime(first_day_previous_month.year, first_day_previous_month.month, 1)
-        date = first_day_previous_month
 
         user_monthly_model = self.env['res.users.monthly.records']
-        month_date = self.get_month_to_date(date) + " - " + str(date.year)
+        month_date = self.get_month_to_date(today) + " - " + str(today.year)
 
         for user in self.search([]):
+            # Calcula el último día del mes actual
+            month_end = (today + relativedelta(months=1, day=1)) - timedelta(days=1)
+
+            # Calcula los litros vendidos 
+            liters_sold = self.get_sum_values(month_end, user)
+
             record = user_monthly_model.search([('res_user_id', '=', user.id), ('registered_month', '=', month_date)])
+
             if record:
                 record.write({
-                    'current_liters': self.get_sum_values(date, user),
+                    'current_liters': liters_sold,
                 })
+
 
     def get_month_to_date(self, date_period):
         dict_month = {
